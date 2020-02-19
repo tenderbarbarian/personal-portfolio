@@ -1,0 +1,17 @@
+@import '../styles/variables.scss';
+
+.footer-container {
+	margin-top: 3rem;
+	font-size: .7rem;
+	a {
+		color: $default-font-color;
+		text-decoration: none;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	@media (min-width: $desktop-breakpoint) {
+		flex-direction: row;
+	}
+}

@@ -1,0 +1,40 @@
+@import '../styles/variables.scss';
+
+.container {
+	margin: 0;
+	max-width: 1200px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.box {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+	margin-bottom: $l-size;
+	// background-color: rgba(255, 255, 255, .15);
+	// backdrop-filter: blur(5px);
+	// border-radius: 8px;
+	// box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
+
+	@media (min-width: 540px) {
+		padding: $s-size;
+	}
+	@media (min-width: 640px) {
+		padding: $m-size;
+	}
+	@media (min-width: 1000x) {
+		padding: $l-size;
+	}
+}
+
+// .picture {
+// 	background-image: url('../images/adam-niescioruk.jpg');
+// 	background-size: cover; // Cover the entire box--layout
+// 	display: flex;
+// 	flex-direction: column;
+// }

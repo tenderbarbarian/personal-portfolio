@@ -1,0 +1,13 @@
+@import '../styles/variables.scss';
+
+.toggleIcon {
+	font-size: $m-size;
+	margin: .8rem;
+	padding-bottom: .1rem;
+}
+
+.toggleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

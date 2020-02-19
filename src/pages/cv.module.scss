@@ -1,0 +1,39 @@
+@import '../styles/variables.scss';
+@import '../styles/components.scss';
+
+.downloadSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: $s-size;
+	padding: 0;
+	@media (min-width: 640px) {
+		margin-bottom: $m-size;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	a {
+		margin: 10px 0;
+	}
+	h2 {
+		margin: 0;
+	}
+}
+
+.cvHolder {
+	border: 1px solid $arsenic;
+	padding: 1px;
+	border-radius: 3px;
+}
+
+.callToAction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// border: 1px dashed green;
+	padding: $l-size 0;
+	a {
+		margin: 0;
+	}
+}

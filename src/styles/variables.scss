@@ -1,0 +1,54 @@
+// Font size
+$s-font: 1.4rem;
+$l-font: 1.8rem;
+
+// Spacing and font-size
+$u-size: 0.8rem;
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+// Responsive website
+$desktop-breakpoint: 45rem;
+
+$form-indentation: 110px;
+
+// Colors
+$anti-flash-white: #eaf4f4;
+$arsenic: #3c474b;
+$bittersweet: #ff4800;
+// $bittersweet: #ff5a5f;
+$firebug: #ff0800;
+$energize: #f47d0d;
+$blue-magenta-violet: #593c8f;
+$charcoal: #484848;
+$cyan-azure: #4f7cac;
+$dark-jungle-green: #162521;
+$dodget-blue: #3b95f7;
+$gainsboro: #dbdbdb;
+$link-color: #02047c;
+$mint-green: #42f168;
+$night-rider: #333333;
+$solitude: #fafafb;
+$sunny: #fff07c;
+$suva-grey: #8e8e8e;
+
+$border-color: $gainsboro;
+$default-font-color: $night-rider;
+$secondary-font-color: $suva-grey;
+$login-btn-color: $bittersweet;
+$primary-btn-color: $bittersweet;
+$secondary-btn-color: $link-color;
+$table-header-bg: $solitude;
+$header: $solitude;
+
+//Gradients
+$juicyOrange: linear-gradient(35deg, $energize 0%, $bittersweet);
+$sweetOrange: linear-gradient(35deg, $bittersweet 10%, $firebug);
+$fallingOrange: linear-gradient(0deg, $bittersweet 10%, $energize);
+
+// background: linear-gradient(to right, #403b4a, #bbbbb4);
+// background-image: linear-gradient(to right top, #fab823, #f9a315, #f68d0c, #f3770d, #ee5f13);
+// background-image: linear-gradient(135deg, #855edd 0%, #63afd3 100%); // purple blue
+// background: linear-gradient(45deg, #f47d0d, $bittersweet);
