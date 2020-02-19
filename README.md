@@ -7,7 +7,9 @@
 
 ## 🥅 Added in this starter
 
-This project is a fork of [official default starter](https://github.com/gatsbyjs/gatsby-starter-default), with some added features which I personally prefer.
+This project is a fork of [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+
+## Features
 
 1. TypeScript support
 1. Offline support

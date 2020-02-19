@@ -1,46 +1,68 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import DarkModeToggle from './DarkModeToggle';
+import headerStyles from './header.module.scss';
+import './Header.scss'; // darkmode styles
 
 interface HeaderProps {
-  siteTitle: string
+  siteTitle: string;
 }
 
 const Header = ({ siteTitle }: HeaderProps) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header className={headerStyles.header}>
+    <div className={headerStyles.toggleContainer}>
+      <DarkModeToggle />
     </div>
+    <nav>
+      <ul className={headerStyles.navList}>
+        <li>
+          <Link
+            to="/"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/projects/"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/cv/"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
+            CV
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contact/"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
+    </nav>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

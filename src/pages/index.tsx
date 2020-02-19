@@ -1,25 +1,24 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
+import React from 'react';
+import Layout from '../components/Layout';
+import '../utils/fontawesome';
+import '../styles/styles.scss';
+import SEO from '../components/SEO';
+import indexStyles from './index.module.scss';
+import TiltCard from '../components/Tilt';
 
-export const IndexPage = () => (
-  <>
-    <h2>Hi people</h2>
-    <p>
-      The starter is a fork from default starter, with TypeScript and service
-      worker support.
-    </p>
-    <p>Now go build something great.</p>
-    <p>
-      <Link to="/page-2/">Go to another page</Link>
-    </p>
-  </>
-)
+export const IndexPage = () => {
+  return (
+    <div className={indexStyles.tiltContainer}>
+      <TiltCard />
+    </div>
+  );
+};
 
 const LayoutIndexPage = () => (
   <Layout>
+    <SEO title="Home" />
     <IndexPage />
   </Layout>
-)
+);
 
-export default LayoutIndexPage
+export default LayoutIndexPage;

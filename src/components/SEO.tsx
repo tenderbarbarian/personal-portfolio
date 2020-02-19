@@ -1,25 +1,19 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import favicon from '../images/favicon.ico';
 
 interface MetaObject {
-  name: string
-  content: string
+  name: string;
+  content: string;
 }
 
 interface SEOProps {
-  description: string
-  lang: string
-  meta: MetaObject[]
-  title: string
+  description: string;
+  lang: string;
+  meta: MetaObject[];
+  title: string;
 }
 
 function SEO({ description, lang, meta, title }: SEOProps) {
@@ -35,9 +29,9 @@ function SEO({ description, lang, meta, title }: SEOProps) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -80,21 +74,23 @@ function SEO({ description, lang, meta, title }: SEOProps) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
-  )
+    >
+      <link rel="icon" href={favicon} />
+    </Helmet>
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

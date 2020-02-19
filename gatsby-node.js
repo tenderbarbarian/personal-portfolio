@@ -1,7 +1,132 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+// const path = require('path');
 
-// You can delete this file if you're not using it
+// // for Markdown blog
+// module.exports.onCreateNode = ({ node, actions }) => {
+//   const { createNodeField } = actions;
+//   if (node.internal.type === 'MarkdownRemark') {
+//     console.log(JSON.stringify(node, undefined, 4));
+//     const slug = path.basename(node.fileAbsolutePath, '.md');
+//     createNodeField({
+//       node,
+//       name: 'slug',
+//       value: slug,
+//     });
+//   }
+// };
+
+'use strict';
+
+const path = require('path');
+
+module.exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  // Sometimes, optional fields tend to get not picked up by the GraphQL
+  // interpreter if not a single content uses it. Therefore, we're putting them
+  // through `createNodeField` so that the fields still exist and GraphQL won't
+  // trip up. An empty string is still required in replacement to `null`.
+
+  switch (node.internal.type) {
+    case 'MarkdownRemark': {
+      const {
+        permalink,
+        layout,
+        demo,
+        code,
+        description,
+        tech,
+      } = node.frontmatter;
+      console.log(JSON.stringify(node.frontmatter));
+      const { relativePath } = getNode(node.parent);
+
+      let slug = permalink;
+
+      if (!slug) {
+        slug = `/${relativePath.replace('.md', '')}/`;
+      }
+
+      // Used to generate URL to view this content.
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug || '',
+      });
+
+      // Used to determine a page layout.
+      createNodeField({
+        node,
+        name: 'layout',
+        value: layout || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'demo',
+        value: demo || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'code',
+        value: code || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'tech',
+        value: tech || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'description',
+        value: description || '',
+      });
+    }
+  }
+};
+
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const results = await graphql(`
+    {
+      allMarkdownRemark(limit: 1000) {
+        edges {
+          node {
+            fields {
+              layout
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (results.errors) {
+    console.error(results.errors);
+    throw new Error(results.errors);
+  }
+  results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { slug, layout } = node.fields;
+
+    createPage({
+      path: slug,
+      // This will automatically resolve the template to a corresponding
+      // `layout` frontmatter in the Markdown.
+      //
+      // Feel free to set any `layout` as you'd like in the frontmatter, as
+      // long as the corresponding template file exists in src/templates.
+      // If no template is set, it will fall back to the default `page`
+      // template.
+      //
+      // Note that the template has to exist first, or else the build will fail.
+      component: path.resolve(`./src/templates/${layout || 'page'}.tsx`),
+      context: {
+        // Data passed to context is available in page queries as GraphQL variables.
+        slug,
+      },
+    });
+  });
+};
