@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import cardStyles from './card.module.scss';
+import Video from '../components/Video.tsx';
+// import IFrame from '../components/Video.tsx';
 
 export type Frontmatter = {
   title: string;
@@ -32,7 +34,7 @@ export const Card = ({ node }: CardProps) => {
     code,
     featuredImage,
     tech,
-    date,
+    iframe,
     description,
   } = node.frontmatter;
 
@@ -76,14 +78,27 @@ export const Card = ({ node }: CardProps) => {
       </div>
       <div className={cardStyles.right}>
         <div className={cardStyles.imgHoverZoom}>
-          <Link to={`${node.fields.slug}`}>
-            {featuredImage && (
-              <img
-                src={featuredImage.childImageSharp.sizes.src}
-                sizes={featuredImage.childImageSharp.sizes.sizes}
-              />
-            )}
-          </Link>
+          {iframe ? (
+            // <Video videoSrcURL={iframe} videoTitle={title}></Video>
+            // <IFrame src={iframe} title={title}></IFrame>
+            <iframe
+              width="500"
+              height="300"
+              src={iframe}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <Link to={`${node.fields.slug}`}>
+              {featuredImage && (
+                <img
+                  src={featuredImage.childImageSharp.sizes.src}
+                  sizes={featuredImage.childImageSharp.sizes.sizes}
+                />
+              )}
+            </Link>
+          )}
         </div>
       </div>
     </li>

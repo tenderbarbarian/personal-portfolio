@@ -29,6 +29,7 @@ const Projects = () => {
               demo
               tech
               description
+              iframe
               featuredImage {
                 childImageSharp {
                   sizes(maxWidth: 500, quality: 70) {
