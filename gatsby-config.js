@@ -14,6 +14,13 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `darkorange`,
+        showSpinner: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -65,11 +72,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     'gatsby-plugin-scss-typescript',
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-use-dark-mode',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-typescript-pwa`,
-        short_name: `starter`,
+        name: `KatarzynaPohl-Portfolio`,
+        short_name: `pohl`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -83,6 +91,5 @@ module.exports = {
         appendScript: require.resolve('./src/service-worker.js'),
       },
     },
-    'gatsby-plugin-use-dark-mode',
   ],
 };
