@@ -1,0 +1,11 @@
+@import '../styles/variables.scss';
+
+.box {
+	padding: 1rem;
+
+	margin: 1rem 0 $l-size 0;
+	background-color: rgba(255, 255, 255, .15);
+	backdrop-filter: blur(5px);
+	border-radius: 8px;
+	box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
+}

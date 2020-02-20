@@ -26,11 +26,11 @@ interface PageTemplateProps {
 const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
   <Layout>
     <SEO title={data.markdownRemark.frontmatter.title} />
-    <div className={pageStyles.box}>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      {/* eslint-disable-next-line react/no-danger */}
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </div>
+    {/* <div className={pageStyles.box}> */}
+    <h1>{data.markdownRemark.frontmatter.title}</h1>
+    {/* eslint-disable-next-line react/no-danger */}
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    {/* </div> */}
   </Layout>
 );
 

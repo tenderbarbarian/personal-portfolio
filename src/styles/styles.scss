@@ -1,6 +1,96 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 @import './variables.scss';
 
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+	background-color: #1e1e1e;
+	border-radius: 0.3em;
+	margin: 0.5em 0;
+	padding: 1em;
+	overflow: auto;
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	// width: 500px;
+	min-width: 0;
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 7px;
+		position: relative;
+		top: 24px;
+		background-color: white;
+		cursor: pointer;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary-btn-color;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: white;
+	}
+}
+
+/**
+   * Remove the default PrismJS theme background-color, border-radius, margin,
+   * padding and overflow.
+   * 1. Make the element just wide enough to fit its content.
+   * 2. Always fill the visible space in .gatsby-highlight.
+   * 3. Adjust the position of the line numbers
+   */
+.gatsby-highlight pre[class*="language-"] {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	overflow: initial;
+	flex: 1;
+	float: left; /* 1 */
+	min-width: 100%; /* 2 */
+	-webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+	padding-left: 2.8em; /* 3 */
+}
+
+.gatsby-highlight pre[class*="language-"]::before {
+	background: black;
+	border-radius: 0 0 0.25rem 0.25rem;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 0.025rem;
+	padding: 0.1rem 0.5rem;
+	position: absolute;
+	right: 15px;
+	text-align: right;
+	text-transform: uppercase;
+	top: -18px;
+}
+
+.gatsby-highlight pre[class*="language-javascript"]::before {
+	content: "js";
+	background: #f7df1e;
+	color: black;
+}
+
+.gatsby-highlight pre[class*="language-js"]::before {
+	content: "js";
+	background: #f7df1e;
+	color: black;
+}
+
+.gatsby-highlight pre[class*="language-html"]::before {
+	content: "html";
+	background: #005a9c;
+	color: white;
+}
+
+.gatsby-highlight pre[class*="language-css"]::before {
+	content: "css";
+	background: #ff9800;
+	color: white;
+}
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -8,9 +98,7 @@ html {
 }
 body {
 	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

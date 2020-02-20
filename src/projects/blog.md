@@ -10,9 +10,9 @@ featuredImage: "./blog.jpg"
 ---
 
 ![Blog](./blog.jpg)
-## 
+## Core technologies
 
-1. Create React App
-2. Gatsby and GraphQL
-3. Next.js
+1. React
+2. Gatsby 
+3. GraphQL
 

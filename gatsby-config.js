@@ -32,6 +32,25 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `gatsby-remark-autolink`,
+              maintainCase: true,
+              removeAccents: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              // classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            },
+          },
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
