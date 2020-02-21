@@ -28,18 +28,12 @@ featuredImage: "./mybills.jpg"
 
 ## Test login:
 
->__login__ : mybills.app.test@gmail.com <br>
->__password__ : 123.app.test
+>__login__ : `mybills.app.test@gmail.com` <br>
+>__password__ : `123.app.test`
 
-## To quote Oscar Wilde
+## What is it?
 
-<!-- ![landingPageScreenshot](./mybills.jpg) -->
-> Anyone who lives within their means
-> suffers from a lack of imagination.
-
-Thought provoking? Definitely yes. However, I myself do not wish to overspend. Hence I introduce to you a web app to track expenses: MyBills. 
-
-It is a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
+MyBills App is a web app: a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
 
 ## Core functionality:
 - login with __Google__
@@ -51,22 +45,6 @@ It is a secure expense manager with authentication and user accounts. The featur
 - filter expenses with text and date filters
 - display summary for all visible expenses
 - fully responsive design
-
-## The following technologies have been used to achieve the end goal:
-
-- `React` for UI
-- `Redux` for managing state
-- `React-Router` for client-side routing with public/private pages
-- `Webpack` for bundling
-- `Babel` for __ES6 / ES7__ syntax
-- `Enzyme` with `Jest` for Unit Testing
-- `Moment.js` for parsing, validating, manipulating, and displaying dates and times
-- `Node.js` and `Express.js` on back-end
-- `Redux-thunk` as middleware
-- `Firebase` for storing data and Google based authentication
-- `SASS` for styling
-- `Git` & `GitHub` for version control
-- `Heroku` for deployment
 
 ## How It Works?
 
@@ -82,7 +60,7 @@ GET /expense/`<expenseId>`| Fetch individual expense
 PUT /expense/`<expenseId>` | Modify an expense entry
 DELETE /expense/`<expenseId>` | Delete an expense entry
 
-## How To Use
+## How To Use?
 
 ### Authentication and general use
 - Click on *Login with Google* button to authenticate using a Google Account
@@ -93,6 +71,8 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
     2. __Logout__: The *Logout* button on the top right of the header will log you out from the current session. All your expenses will be saved for further use.
 
 ### Creating an expense
+![addBill](./mybills2.jpg)
+
 - Click on *Add Expense* button below your expense summary for adding an expense.
 - Add all the details of your expense
     1. __Description__: Add title/description of your expense (compulsory)
@@ -125,3 +105,28 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 - Clicking on that button will ask for your confirmation for removal
 - Click on *Remove* on the pop-up to confirm the removal
 - You will be redirected to the dashboard upon removal.
+
+## The following technologies have been used to achieve the end goal:
+
+- `React` for UI
+- `Redux` for managing state
+- `React-Router` for client-side routing with public/private pages
+- `Webpack` for bundling
+- `Babel` for __ES6 / ES7__ syntax
+- `Enzyme` with `Jest` for Unit Testing
+- `Moment.js` for parsing, validating, manipulating, and displaying dates and times
+- `Node.js` and `Express.js` on back-end
+- `Redux-thunk` as middleware
+- `Firebase` for storing data and Google based authentication
+- `SASS` for styling
+- `Git` & `GitHub` for version control
+- `Heroku` for deployment
+
+### To quote Oscar Wilde:
+
+> Anyone who lives within their means
+> suffers from a lack of imagination.
+
+However, I myself do not wish to overspend. Hence this app. Enjoy! If you want to explore, <a href='#Test-login'>there's test login</a>. 
+
+![landingPageScreenshot](./mybills.jpg)
