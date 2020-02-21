@@ -10,6 +10,16 @@ featuredImage: "./indoorplants.jpg"
 # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
+<p>
+    <img src="https://img.shields.io/badge/backend-NodeJS-bluegreen?style=flat&logo=Nodejs" />
+    <img src="https://img.shields.io/badge/server-Express-green?style=flat&logo=Express" />
+    <img src="https://img.shields.io/badge/database-MongoDB-darkgreen?style=flat&logo=MongoDB" />
+    <img src="https://img.shields.io/badge/package--manager-Npm-darkred?style=flat&logo=npm" />
+    <img src="https://img.shields.io/badge/styling-Bootstrap-navy?style=flat&logo=Bootstrap" />
+    <img src="https://img.shields.io/badge/deployment-Heroku-lightblue?style=flat&logo=Heroku" />
+    <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
+</p>
+
 ![IndoorPlants](./indoorplants.jpg)
 
 

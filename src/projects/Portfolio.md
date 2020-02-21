@@ -14,6 +14,18 @@ https://youtu.be/dQw4w9WgXcQ -->
 
 <!-- ![portfolioCard](./kpohl.jpg) -->
 
+<p>
+    <img src="https://img.shields.io/badge/library-React-blue?style=flat&logo=react" />
+    <img src="https://img.shields.io/badge/framework-Gatsby-purple?style=flat&logo=gatsby" />
+    <img src="https://img.shields.io/badge/styling-Sass-pink?style=flat&logo=Sass" />
+    <img src="https://img.shields.io/badge/backend-GraphQL-navy?style=flat" />
+    <img src="https://img.shields.io/badge/module--bundler-Webpack-lightblue?style=flat&logo=webpack" />
+    <img src="https://img.shields.io/badge/package--manager-Npm-darkred?style=flat&logo=npm" />
+    <img src="https://img.shields.io/badge/deployment-Netlify-aqua?style=flat&logo=Netlify" />
+    <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
+</p>
+
+
 This Portfolio Project is feature-rich; with many things like SEO, speedy, optimized images or responsive design for all devices (mobile, tablet and desktop) already implemented and some more to come. Let's take a look at all the available features:
 
 ## Highly optimized
@@ -108,9 +120,4 @@ And we are done!
 
  If you'd like to learn more or have any questions please feel free to contact me.
  Oh, and feel free to give it star on GitHub if you like.
-
-## License
-
-The content of this project itself is licensed under The MIT License.
-If you find a use for this code useful, please cite Katarzyna Pohl as co-author.
 

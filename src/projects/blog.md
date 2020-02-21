@@ -9,7 +9,20 @@ tech: ["React", "Gatsby", "GraphQL", "SCSS", "Javascript"]
 iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
+<p>
+    <img src="https://img.shields.io/badge/library-React-blue?style=flat&logo=react" />
+    <img src="https://img.shields.io/badge/framework-Gatsby-purple?style=flat&logo=gatsby" />
+    <img src="https://img.shields.io/badge/CMS-Contentful-yellow?style=flat&logo=Contentful" />
+    <img src="https://img.shields.io/badge/styling-Sass-pink?style=flat&logo=Sass" />
+    <img src="https://img.shields.io/badge/backend-GraphQL-navy?style=flat" />
+    <img src="https://img.shields.io/badge/module--bundler-Webpack-lightblue?style=flat&logo=webpack" />
+    <img src="https://img.shields.io/badge/package--manager-Npm-darkred?style=flat&logo=npm" />
+    <img src="https://img.shields.io/badge/deployment-Netlify-aqua?style=flat&logo=Netlify" />
+    <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
+</p>
+
 ![Blog](./blog.jpg)
+
 ## Core technologies
 
 1. React

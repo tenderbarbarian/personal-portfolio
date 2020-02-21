@@ -12,12 +12,19 @@ featuredImage: "./mybills.jpg"
 
 <p>
     <img src="https://img.shields.io/badge/framework-React-blue?style=flat&logo=react" />
-    <img src="https://img.shields.io/badge/package--manager-yarn-blueviolet?style=flat&logo=yarn" />
-    <img src="https://img.shields.io/badge/backend-nodeJS-bluegreen?style=flat" />
+    <img src="https://img.shields.io/badge/package--manager-Yarn-navy?style=flat&logo=yarn" />
+    <img src="https://img.shields.io/badge/backend-NodeJS-bluegreen?style=flat" />
     <img src="https://img.shields.io/badge/module--bundler-Webpack-lightblue?style=flat&logo=webpack" />
+    <img src="https://img.shields.io/badge/ES6&ES7-Babel-olive?style=flat&logo=babel" />
+    <img src="https://img.shields.io/badge/testing-Enzyme-red?style=flat" />
+    <img src="https://img.shields.io/badge/testing-Jest-green?style=flat&logo=Jest" />
+    <img src="https://img.shields.io/badge/database-Firebase-yellow?style=flat&logo=Firebase" />
+    <img src="https://img.shields.io/badge/authorisation-Google-blue?style=flat&logo=Google" />
+    <img src="https://img.shields.io/badge/styling-Sass-pink?style=flat&logo=Sass" />
+    <img src="https://img.shields.io/badge/deployment-Heroku-lightblue?style=flat&logo=Heroku" />
+    <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
 
-![landingPageScreenshot](./mybills.jpg)
 
 ## Test login:
 
@@ -26,6 +33,7 @@ featuredImage: "./mybills.jpg"
 
 ## To quote Oscar Wilde
 
+<!-- ![landingPageScreenshot](./mybills.jpg) -->
 > Anyone who lives within their means
 > suffers from a lack of imagination.
 
@@ -95,6 +103,7 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 - View it on your dashboard
 
 ### Filtering/Sorting expenses
+![filterMyBills](./filterMyBills.jpg)
 - Visit your dashboard page and the expense summary will show you the total number of expenses on screen and the amount they total.
 - Use the filters to filter your expenses
     1. __Search By Title__: Search for your expense by it's title and recieve per-keystroke feedback of the value typed.
