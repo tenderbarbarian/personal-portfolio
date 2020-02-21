@@ -9,6 +9,16 @@ tech: ["React", "Gatsby", "GraphQL", "SCSS", "Javascript"]
 iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
+
+
+https://youtu.be/dQw4w9WgXcQ
+
+## What is it?
+
+It's a Headless React blog created with Gatsby and GraphQL. For post sourcing it is integrated with Contentful CMS. 
+
+## Core technologies
+
 <p>
     <img src="https://img.shields.io/badge/library-React-blue?style=flat&logo=react" />
     <img src="https://img.shields.io/badge/framework-Gatsby-purple?style=flat&logo=gatsby" />
@@ -20,12 +30,3 @@ iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     <img src="https://img.shields.io/badge/deployment-Netlify-aqua?style=flat&logo=Netlify" />
     <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
-
-https://youtu.be/dQw4w9WgXcQ
-
-## Core technologies
-
-1. React
-2. Gatsby 
-3. GraphQL
-

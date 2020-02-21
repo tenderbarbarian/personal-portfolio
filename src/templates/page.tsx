@@ -5,52 +5,88 @@ import SEO from '../components/SEO';
 import pageStyles from './page.module.scss';
 
 interface PageTemplateProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        description: string;
-        author: string;
-      };
-    };
-    markdownRemark: {
-      html: string;
-      excerpt: string;
-      frontmatter: {
-        title: string;
-      };
-    };
-  };
+	data: {
+		site: {
+			siteMetadata: {
+				title: string;
+				description: string;
+				author: string;
+			};
+		};
+		markdownRemark: {
+			html: string;
+			excerpt: string;
+			frontmatter: {
+				title: string;
+			};
+		};
+	};
 }
 
 const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <Layout>
-    <SEO title={data.markdownRemark.frontmatter.title} />
-    <div className={pageStyles.box}>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      {/* eslint-disable-next-line react/no-danger */}
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </div>
-  </Layout>
+	<Layout>
+		<SEO title={data.markdownRemark.frontmatter.title} />
+
+		<div className={pageStyles.box}>
+			<div className={pageStyles.projectHeader}>
+				<h1>{data.markdownRemark.frontmatter.title}</h1>
+				<a href="/projects/" className={pageStyles.borderButton}>
+					<span>Back</span>
+				</a>
+			</div>
+			{/* eslint-disable-next-line react/no-danger */}
+			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+			<div className={pageStyles.topLinks}>
+				{data.markdownRemark.frontmatter.code && (
+					<a
+						href={data.markdownRemark.frontmatter.code}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={pageStyles.borderButton}
+					>
+						Github
+					</a>
+				)}
+				{data.markdownRemark.frontmatter.demo && (
+					<a
+						href={data.markdownRemark.frontmatter.demo}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={pageStyles.borderButton}
+					>
+						Live demo
+					</a>
+				)}
+			</div>
+		</div>
+
+		<div className={pageStyles.more}>
+			<a href="/projects/" className={pageStyles.linkButton}>
+				More Projects
+			</a>
+		</div>
+	</Layout>
 );
 
 export default ContentTemplate;
 
 export const query = graphql`
-  query PageTemplateQuery($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      frontmatter {
-        title
-      }
-    }
-  }
+	query PageTemplateQuery($slug: String!) {
+		site {
+			siteMetadata {
+				title
+				description
+				author
+			}
+		}
+		markdownRemark(fields: { slug: { eq: $slug } }) {
+			html
+			excerpt
+			frontmatter {
+				title
+				code
+				demo
+			}
+		}
+	}
 `;

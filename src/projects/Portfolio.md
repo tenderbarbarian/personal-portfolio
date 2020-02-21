@@ -11,6 +11,11 @@ featuredImage: "./portfolio1.jpg"
 
 <!-- ![portfolioCard](./kpohl.jpg) -->
 
+## What it it?
+
+This is a feature-rich portfolio project; with many things like SEO, speedy, optimized images or responsive design for all devices (mobile, tablet and desktop) already implemented and some more to come. Let's take a look at all the available features:
+
+## Core technologies
 <p>
     <img src="https://img.shields.io/badge/library-React-blue?style=flat&logo=react" />
     <img src="https://img.shields.io/badge/framework-Gatsby-purple?style=flat&logo=gatsby" />
@@ -21,9 +26,6 @@ featuredImage: "./portfolio1.jpg"
     <img src="https://img.shields.io/badge/deployment-Netlify-aqua?style=flat&logo=Netlify" />
     <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
-
-
-This Portfolio Project is feature-rich; with many things like SEO, speedy, optimized images or responsive design for all devices (mobile, tablet and desktop) already implemented and some more to come. Let's take a look at all the available features:
 
 ## Highly optimized
 Despite being heavily SEO optimized performance and accessibility have also been a major factor when implementing this portfolio. This leads to a great Lighthouse result.

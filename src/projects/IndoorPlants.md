@@ -10,6 +10,15 @@ featuredImage: "./indoorplants.jpg"
 # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
+
+
+![IndoorPlants](./indoorplants.jpg)
+
+## What is it?
+
+IndoorPlants is a web app for plants enthusiasts, to keep track and discuss their favourite species. It has typical CRUD functionality and follows REST-ful convention.
+
+## Core technologies
 <p>
     <img src="https://img.shields.io/badge/backend-NodeJS-bluegreen?style=flat&logo=Nodejs" />
     <img src="https://img.shields.io/badge/server-Express-green?style=flat&logo=Express" />
@@ -20,31 +29,18 @@ featuredImage: "./indoorplants.jpg"
     <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
 
-![IndoorPlants](./indoorplants.jpg)
+## Main features
 
-
-**Throughout this project I've used multiple tools and technologies including:**
-
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap 4
-* DOM Manipulation
-* jQuery
-* Unix(Command Line) Commands
-* NodeJS
-* NPM
-* ExpressJS
-* REST
-* MongoDB
+* Responsive design with __Bootstrap 4__
 * Authentication
 * Authorization
+* Editable comments
 
 
-![IndoorPlants](./indoorplants2.jpg)
+<!-- ![IndoorPlants](./indoorplants2.jpg)
 ![IndoorPlants](./indoorplants3.jpg)
 ![IndoorPlants](./indoorplants4.jpg)
 ![IndoorPlants](./indoorplants5.jpg)
 ![IndoorPlants](./indoorplants6.jpg)
-![IndoorPlants](./indoorplants7.jpg)
+![IndoorPlants](./indoorplants7.jpg) -->
 
