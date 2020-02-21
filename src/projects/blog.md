@@ -21,7 +21,7 @@ iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
 
-![Blog](./blog.jpg)
+https://youtu.be/dQw4w9WgXcQ
 
 ## Core technologies
 

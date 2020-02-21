@@ -25,7 +25,6 @@
 		"gatsby-plugin-use-dark-mode": "^1.1.2",
 		"gatsby-remark-autolink-headers": "^2.1.24",
 		"gatsby-remark-embedder": "^1.11.2",
-		"gatsby-remark-external-links": "0.0.4",
 		"gatsby-remark-images": "^3.1.42",
 		"gatsby-remark-prismjs": "^3.3.31",
 		"gatsby-remark-relative-images": "^0.2.3",

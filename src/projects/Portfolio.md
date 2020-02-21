@@ -8,9 +8,6 @@ date: '2020-01-06'
 featuredImage: "./portfolio1.jpg"
 # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
-<!-- ## Embeded uTube
-
-https://youtu.be/dQw4w9WgXcQ -->
 
 <!-- ![portfolioCard](./kpohl.jpg) -->
 
