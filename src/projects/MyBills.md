@@ -1,34 +1,118 @@
 ---
 layout: page
 date: "2019-11-04"
-title: 'MyBills'
+title: 'MyBills App'
 demo: 'http://react-redux-planer.herokuapp.com/'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'App to track expenses. Includes Jest and Enzyme unit tests. Requires Google authentication to access.'
 tech: ["React", "Firebase", "Enzyme", "Jest", "Sass", "Webpack", "Babel"]
-featuredImage: "./mybills1.jpg"
+featuredImage: "./mybills.jpg"
+# iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
-This web app is an expense manager called MyBills. The features include: authentication, user accounts, routing, testing, form validation, database storage.
+<p>
+    <img src="https://img.shields.io/badge/framework-React-blue?style=flat&logo=react" />
+    <img src="https://img.shields.io/badge/package--manager-yarn-blueviolet?style=flat&logo=yarn" />
+    <img src="https://img.shields.io/badge/backend-nodeJS-bluegreen?style=flat" />
+    <img src="https://img.shields.io/badge/module--bundler-Webpack-lightblue?style=flat&logo=webpack" />
+</p>
+
+![landingPageScreenshot](./mybills.jpg)
+
+## Test login:
+
+>__login__ : mybills.app.test@gmail.com <br>
+>__password__ : 123.app.test
+
+## To quote Oscar Wilde
+
+> Anyone who lives within their means
+> suffers from a lack of imagination.
+
+Thought provoking? Definitely yes. However, I myself do not wish to overspend. Hence I introduce to you a web app to track expenses: MyBills. 
+
+It is a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
+
+## Core functionality:
+- login with __Google__
+- store expenses in database
+- add new expenses
+- edit existing expenses
+- remove expenses
+- sort expenses by amount/date
+- filter expenses with text and date filters
+- display summary for all visible expenses
+- fully responsive design
 
 ## The following technologies have been used to achieve the end goal:
 
-- React
-- Redux
-- React-Router
-- Webpack
-- Babel
-- Testing with Jest
-- Enzyme
-- Firebase
-- Authentication
-- Git/GitHub
-- ES6/ES7
+- `React` for UI
+- `Redux` for managing state
+- `React-Router` for client-side routing with public/private pages
+- `Webpack` for bundling
+- `Babel` for __ES6 / ES7__ syntax
+- `Enzyme` with `Jest` for Unit Testing
+- `Moment.js` for parsing, validating, manipulating, and displaying dates and times
+- `Node.js` and `Express.js` on back-end
+- `Redux-thunk` as middleware
+- `Firebase` for storing data and Google based authentication
+- `SASS` for styling
+- `Git` & `GitHub` for version control
+- `Heroku` for deployment
 
+## How It Works?
 
-![loginScreen](./mybills1.jpg)
+User data is stored in the Firebase cloud. The accounts are authenticated via Google. Front-end is build with React, bundled with Webpack and styled with Sass. 
 
-![listExpenses](./mybills.jpg)
+#### API Endpoints
+Endpoints | Functionality
+------------ | -------------
+POST /auth/signup | Register a new user
+POST /auth/login | Sign in a user
+GET / | Fetch all user expenses
+GET /expense/`<expenseId>`| Fetch individual expense
+PUT /expense/`<expenseId>` | Modify an expense entry
+DELETE /expense/`<expenseId>` | Delete an expense entry
 
+## How To Use
 
-![editExpense](./mybills3.jpg)
+### Authentication and general use
+- Click on *Login with Google* button to authenticate using a Google Account
+- From the pop-up select the google account you want to use
+- Your dashboard screen should open with your name on the top-right
+- App Navigation :
+    1. __Dashboard__: Clicking the *Expensify* text on the header from any page will redirect you to the expenses dashboard.
+    2. __Logout__: The *Logout* button on the top right of the header will log you out from the current session. All your expenses will be saved for further use.
+
+### Creating an expense
+- Click on *Add Expense* button below your expense summary for adding an expense.
+- Add all the details of your expense
+    1. __Description__: Add title/description of your expense (compulsory)
+    2. __Amount__: Add the amount you spent format : *[...xx.yy]* (compulsory)
+    3. __Date__: Add the date of the expenditure *(defaults to current date)* 
+    4. __Note__: Add some additional information about your expense.
+- Click on *Add Expense* to save the expense
+- View it on your dashboard
+
+### Filtering/Sorting expenses
+- Visit your dashboard page and the expense summary will show you the total number of expenses on screen and the amount they total.
+- Use the filters to filter your expenses
+    1. __Search By Title__: Search for your expense by it's title and recieve per-keystroke feedback of the value typed.
+    2. __Search By Date__: Search for a group of expenditures between two particular dates i.e the start date and the end date.
+- Sort your expenses using the sort dropdown/select box
+    1. __Amount__: Displays all the expenses on screen in the order of costliest expense first and the cheapest last.
+    2. __Date__: Displays all the expenses on screen in the order such that the expense with the latest date of expenditure comes first.
+- The *Unfiltered Expenses* component will continue to show how many expenses have been hidden due to the filters applied. 
+
+### Editing an expense
+![editScreenshot](./mybills3.jpg)
+- Clicking on any displayed expense will allow you to edit it.
+- Follow the same rules as that of adding expense
+- Click on *Add Expense* button to save and update the expense
+
+### Removing an expense
+- Clicking on any displayed expense will allow you to remove it
+- The *Remove* button beneath the *Add Expense* button will delete your expense
+- Clicking on that button will ask for your confirmation for removal
+- Click on *Remove* on the pop-up to confirm the removal
+- You will be redirected to the dashboard upon removal.

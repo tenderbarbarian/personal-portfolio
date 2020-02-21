@@ -7,64 +7,91 @@ import '../utils/fontawesome';
 import projectStyles from './projects.module.scss';
 
 export type Edge = {
-  node: Node;
+	node: Node;
 };
 
 export interface Content {
-  edges: Node[];
+	edges: Node[];
 }
 
 const Projects = () => {
-  // markDown query
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              date
-              code
-              demo
-              tech
-              description
-              iframe
-              featuredImage {
-                childImageSharp {
-                  sizes(maxWidth: 500, quality: 70) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-  // markdown blog
-  return (
-    <Layout>
-      <SEO title="Projects" />
-      <ol className={projectStyles.projectList}>
-        {data.allMarkdownRemark.edges.map((edge: Edge) => (
-          <Card
-            node={edge.node}
-            key={edge.node.frontmatter.title}
-            className={projectStyles.card}
-          ></Card>
-        ))}
-      </ol>
-    </Layout>
-  );
+	// markDown query
+	const data = useStaticQuery(graphql`
+		{
+			allMarkdownRemark {
+				edges {
+					node {
+						frontmatter {
+							title
+							demo
+							code
+							featuredImage {
+								publicURL
+								size
+								childImageSharp {
+									sizes {
+										src
+									}
+								}
+							}
+							description
+							iframe
+							tech
+						}
+						fields {
+							slug
+							layout
+						}
+					}
+				}
+			}
+		}
+	`);
+	// const data = useStaticQuery(graphql`
+	//   {
+	//     allMarkdownRemark {
+	//       edges {
+	//         node {
+	//           html
+	//           frontmatter {
+	//             title
+	//             date
+	//             code
+	//             demo
+	//             tech
+	//             description
+	//             iframe
+	//             featuredImage {
+	//               childImageSharp {
+	//                 sizes(maxWidth: 500, quality: 70) {
+	//                   base64
+	//                   aspectRatio
+	//                   src
+	//                   srcSet
+	//                   sizes
+	//                 }
+	//               }
+	//             }
+	//           }
+	//           fields {
+	//             slug
+	//           }
+	//         }
+	//       }
+	//     }
+	//   }
+	// `);
+	// markdown blog
+	return (
+		<Layout>
+			<SEO title="Projects" />
+			<ol className={projectStyles.projectList}>
+				{data.allMarkdownRemark.edges.map((edge: Edge) => (
+					<Card node={edge.node} key={edge.node.frontmatter.title} className={projectStyles.card} />
+				))}
+			</ol>
+		</Layout>
+	);
 };
 
 export default Projects;
