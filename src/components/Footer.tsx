@@ -6,8 +6,11 @@ import footerStyles from './footer.module.scss';
 
 interface FooterProps {
 	author?: string;
+	email?: string;
+	linkedin?: string;
+	github?: string;
 }
-const Footer = ({ author }: FooterProps) => (
+const Footer = ({ author, email, linkedin, github }: FooterProps) => (
 	<footer className={footerStyles.footerContainer}>
 		<div>
 			<p>
@@ -31,9 +34,9 @@ const Footer = ({ author }: FooterProps) => (
 			</div>
 		</div>
 		<div>
-			<IconLink url="https://github.com/tenderbarbarian" icon={[ 'fab', 'github' ]} />
-			<IconLink url="mailto:ksoloduc@gmail.com" icon={faEnvelope} />
-			<IconLink url="https://www.linkedin.com/in/katarzynasoloducha/" icon={[ 'fab', 'linkedin' ]} />
+			<IconLink url={github} icon={[ 'fab', 'github' ]} />
+			<IconLink url={`mailto:${email}`} icon={faEnvelope} />
+			<IconLink url={linkedin} icon={[ 'fab', 'linkedin' ]} />
 		</div>
 	</footer>
 );

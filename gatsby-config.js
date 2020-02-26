@@ -4,6 +4,9 @@ module.exports = {
 	siteMetadata: {
 		author: config.author,
 		title: config.siteTitle,
+		email: config.email,
+		linkedin: config.linkedin,
+		github: config.github,
 		description: config.siteDescription,
 		twitter: config.twitter,
 		siteUrl: config.siteUrl,

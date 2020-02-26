@@ -7,13 +7,12 @@
 	align-items: center;
 	justify-content: center;
 	padding-bottom: $l-size;
+	margin-top: $m-size;
+	margin-bottom: $xl-size;
+	@media (min-width: 800px) {
+		margin-top: 0;
+	}
 }
-
-a {
-	color: $default-font-color;
-	text-decoration: none;
-}
-
 // .container {
 // 	margin: 0;
 // 	max-width: 1200px;

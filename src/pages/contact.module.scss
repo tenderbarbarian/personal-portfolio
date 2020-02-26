@@ -29,6 +29,12 @@
 			margin-left: $form-indentation;
 		}
 	}
+	small a {
+		color: $primary-btn-color;
+		&:hover {
+			color: $secondary-font-color;
+		}
+	}
 }
 .errorMessage {
 	color: $primary-btn-color;

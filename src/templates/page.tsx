@@ -22,17 +22,18 @@ interface PageTemplateProps {
 		};
 	};
 }
-
 const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 	<Layout>
 		<SEO title={data.markdownRemark.frontmatter.title} />
 
 		<div className={pageStyles.box}>
 			<div className={pageStyles.projectHeader}>
-				<h1>{data.markdownRemark.frontmatter.title}</h1>
-				<a href="/projects/" className={pageStyles.borderButton}>
-					<span>Back</span>
-				</a>
+				<h1 name="top">{data.markdownRemark.frontmatter.title}</h1>
+				<div>
+					<a href="/projects/" className={pageStyles.borderButton}>
+						<span>Back</span>
+					</a>
+				</div>
 			</div>
 			{/* eslint-disable-next-line react/no-danger */}
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

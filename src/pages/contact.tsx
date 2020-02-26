@@ -1,22 +1,22 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
 
 type FormData = {
-	firstName: string;
-	lastName: string;
+	name: string;
 	email: string;
 	text: string;
-	copy: boolean;
+	// copy: boolean;
 };
 
-const ContactForm = () => {
+const ContactForm = ({ email }) => {
 	const { register, handleSubmit, errors } = useForm<FormData>();
 
 	const onSubmit = (data: FormData, e: React.SyntheticEvent): void => {
-		// const { firstName, lastName, email, text, copy } = data;
+		// const { name, email, text, copy } = data;
 		alert(JSON.stringify(data));
 		e.target.reset(); // reset after form submit
 	};
@@ -24,31 +24,20 @@ const ContactForm = () => {
 
 	return (
 		// <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-		// <input type="hidden" name="bot-field" />
-		// <input type="hidden" name="form-name" value="contact" />
 		<form onSubmit={handleSubmit(onSubmit)} className={contactStyles.form}>
+			<input type="hidden" name="bot-field" />
+			<input type="hidden" name="form-name" value="contact" />
 			<div className={contactStyles.formEntry}>
-				<label>First name</label>
+				<label>Name</label>
 				<input
 					type="text"
-					name="firstName"
-					placeholder="Your"
+					name="name"
+					placeholder="name"
 					ref={register({ required: true, maxLength: 30 })}
 					className={contactStyles.formInput}
 				/>
 			</div>
-			{errors.firstName && <span className={contactStyles.errorMessage}>First name is required</span>}
-			<div className={contactStyles.formEntry}>
-				<label>Last name</label>
-				<input
-					type="text"
-					name="lastName"
-					placeholder="Name"
-					ref={register({ required: true, maxLength: 50 })}
-					className={contactStyles.formInput}
-				/>
-			</div>
-			{errors.lastName && <span className={contactStyles.errorMessage}>Last name is required</span>}
+			{errors.name && <span className={contactStyles.errorMessage}>Name is required</span>}
 			<div className={contactStyles.formEntry}>
 				<label>Email</label>
 				<input
@@ -69,14 +58,14 @@ const ContactForm = () => {
 					name="text"
 					rows="6"
 					ref={register({ required: true })}
-					placeholder="What's on your mind?"
+					placeholder="what's on your mind?"
 					className={contactStyles.formInput}
 				/>
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>Please enter your message</span>}
 			<div className={contactStyles.submitContainer}>
 				<button className={contactStyles.linkButton}>Send message</button>
-				<div>
+				{/* <div>
 					<input
 						type="checkbox"
 						id="copy"
@@ -85,20 +74,30 @@ const ContactForm = () => {
 						className={contactStyles.styledCheckbox}
 					/>
 					<label>Send me a copy</label>
-				</div>
+				</div> */}
 			</div>
 			<small>
-				<a href="mailto:katarzyna.m.pohl@gmail.com">or email me at katarzyna.m.pohl@gmail.com</a>
+				<a href={`mailto:${email}`}>or email me at {email}</a>
 			</small>
 		</form>
 	);
 };
 
 const Contact = () => {
+	const data = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata {
+					email
+				}
+			}
+		}
+	`);
 	return (
 		<Layout>
 			<SEO title="Contact" />
-			<ContactForm />
+
+			<ContactForm email={data.site.siteMetadata.email} />
 		</Layout>
 	);
 };
