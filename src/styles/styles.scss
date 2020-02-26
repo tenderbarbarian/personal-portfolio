@@ -91,6 +91,53 @@
 	background: #ff9800;
 	color: white;
 }
+
+blockquote {
+	position: relative;
+	background: $gainsboro;
+	border-left: 3px solid $primary-btn-color;
+	// margin: 1.5em 10px;
+	color: $default-font-color;
+	padding: $s-size !important;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+// blockquote:before {
+// 	content: open-quote;
+// 	font-size: 6em;
+// 	line-height: 0.1em;
+// 	vertical-align: -0.4em;
+// }
+blockquote p {
+	display: inline;
+}
+
+cite {
+	display: block;
+	position: relative;
+	text-align: right;
+	margin-top: 5px;
+	color: $arsenic;
+	i {
+		position: relative;
+		padding-left: 5px;
+		font-style: italic;
+		background: $suva-grey;
+		z-index: 5;
+		&::before {
+			display: block;
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -70px;
+			width: 60px;
+			height: 1px;
+			overflow: hidden;
+			background: #ccc;
+			z-index: 1;
+		}
+	}
+}
+
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -428,7 +475,7 @@ th {
 	font-weight: bold;
 }
 li {
-	margin-bottom: calc(1.45rem / 2);
+	// margin-bottom: calc(1.45rem / 2);
 }
 ol li {
 	padding-left: 0;

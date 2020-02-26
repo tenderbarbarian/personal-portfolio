@@ -1,21 +1,43 @@
 ---
 layout: page
-title: "Blog with Gatsby"
+title: "Headless Blog"
 date: "2019-11-04"
 demo: 'https://optimistic-stonebraker-707e80.netlify.com/blog/null'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
-description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL'
+description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL, deployed with Netlify'
 tech: ["React", "Gatsby", "GraphQL", "SCSS", "Javascript"]
+featuredImage: "./headless.jpg"
 iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
 
+<!-- <details>
+<summary>Click to expand</summary>
 
+- [What is it?](#What-is-it)
+- [Core technologies](#Core-technologies)
+- [PWA](#PWA)
 
-https://youtu.be/dQw4w9WgXcQ
+</details> -->
+__Table of content:__
+<!-- TOC -->
+
+- [What is it?](#what-is-it)
+- [Core technologies](#core-technologies)
+- [PWA](#pwa)
+- [Headless](#headless)
+- [Contact form](#contact-form)
+- [RSS feed](#rss-feed)
+- [Responsive asymetric layout (header, footer)](#responsive-asymetric-layout-header-footer)
+- [Typography driven design](#typography-driven-design)
+
+<!-- /TOC -->
+
+<!-- https://youtu.be/dQw4w9WgXcQ -->
+![Headless bog](./headless.jpg)
 
 ## What is it?
 
-It's a Headless React blog created with Gatsby and GraphQL. For post sourcing it is integrated with Contentful CMS. 
+It's a Headless React blog created with Gatsby and GraphQL. The content is created with Contentful CMS. 
 
 ## Core technologies
 
@@ -42,7 +64,7 @@ Content comes from Contenful CMS. GrapQL to the rescue.
 
 ## Contact form
 
-Includes spam filters and Captcha
+Includes spam bot filters and Google Captcha.
 
 ## RSS feed
 

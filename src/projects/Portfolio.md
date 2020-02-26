@@ -6,9 +6,24 @@ description: 'PWA with fluid images, dark mode, data sourcing from Markdown and 
 tech: ["React", "Typescript", "Gatsby", "GraphQL", "SCSS"]
 date: '2020-01-06'
 featuredImage: "./portfolio1.jpg"
-# iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
+<!-- # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ' -->
+__Table of content:__
+<!-- TOC -->
 
+- [What it it?](#what-it-it)
+- [Core technologies](#core-technologies)
+- [Highly optimized](#highly-optimized)
+- [Responsive](#responsive)
+- [PWA](#pwa)
+- [Syntax highlighting](#syntax-highlighting)
+- [Strained eyes? DarkMode to the rescue!](#strained-eyes-darkmode-to-the-rescue)
+- [Static pages](#static-pages)
+- [Parallax Tilt Effect](#parallax-tilt-effect)
+- [Super light weight contact form](#super-light-weight-contact-form)
+- [Speedy, optimized images](#speedy-optimized-images)
+
+<!-- /TOC -->
 <!-- ![portfolioCard](./kpohl.jpg) -->
 
 ## What it it?

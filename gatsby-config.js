@@ -48,12 +48,12 @@ module.exports = {
 						options: {
 							className: `gatsby-remark-autolink`,
 							// offsetY: `100`,
-							maintainCase: true,
+							maintainCase: false,
 							removeAccents: true
 						}
 					},
 					{
-						resolve: `gatsby-remark-prismjs`,
+						resolve: `gatsby-remark-prismjs`, // should be placed after `gatsby-remark-autolink-headers`
 						options: {
 							// classPrefix: 'language-',
 							inlineCodeMarker: null,

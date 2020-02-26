@@ -4,12 +4,29 @@ date: "2019-11-04"
 title: 'MyBills App'
 demo: 'http://react-redux-planer.herokuapp.com/'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
-description: 'App to track expenses. Includes Jest and Enzyme unit tests. Requires Google authentication to access.'
+description: 'App to track expenses. Includes Jest and Enzyme unit tests. Requires Google authentication to access. Test [login]: mybills.app.test@gmail.com [password]: 123.app.test'
 tech: ["React", "Firebase", "Enzyme", "Jest", "Sass", "Webpack", "Babel"]
 featuredImage: "./mybills.jpg"
-# iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
+<!-- # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ' -->
+__Table of content:__
+<!-- TOC -->
 
+- [Test login:](#test-login)
+- [What is it?](#what-is-it)
+- [Core functionality:](#core-functionality)
+- [How It Works?](#how-it-works)
+        - [API Endpoints](#api-endpoints)
+- [How To Use?](#how-to-use)
+    - [Authentication and general use](#authentication-and-general-use)
+    - [Creating an expense](#creating-an-expense)
+    - [Filtering/Sorting expenses](#filteringsorting-expenses)
+    - [Editing an expense](#editing-an-expense)
+    - [Removing an expense](#removing-an-expense)
+- [The following technologies have been used to achieve the end goal:](#the-following-technologies-have-been-used-to-achieve-the-end-goal)
+    - [To quote Oscar Wilde:](#to-quote-oscar-wilde)
+
+<!-- /TOC -->
 <p>
     <img src="https://img.shields.io/badge/framework-React-blue?style=flat&logo=react" />
     <img src="https://img.shields.io/badge/package--manager-Yarn-navy?style=flat&logo=yarn" />

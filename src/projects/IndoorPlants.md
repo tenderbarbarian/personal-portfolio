@@ -7,11 +7,17 @@ description: 'REST-ful CRUD hosted on Heroku. Stores data in MongoDB hosted by M
 tech: [ "Javascript", "Express", "NodeJS", "MongoDB", "Bootstrap"]
 date: '2019-10-15'
 featuredImage: "./indoorplants.jpg"
-# iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
 ---
+ <!-- iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ' -->
 
+__Table of content:__
+<!-- TOC -->
 
+- [What is it?](#what-is-it)
+- [Core technologies](#core-technologies)
+- [Main features](#main-features)
 
+<!-- /TOC -->
 ![IndoorPlants](./indoorplants.jpg)
 
 ## What is it?
@@ -43,4 +49,3 @@ IndoorPlants is a web app for plants enthusiasts, to keep track and discuss thei
 ![IndoorPlants](./indoorplants5.jpg)
 ![IndoorPlants](./indoorplants6.jpg)
 ![IndoorPlants](./indoorplants7.jpg) -->
-

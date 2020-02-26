@@ -51,7 +51,7 @@ body.dark-mode {
 		color: $default-font-color;
 	}
 	a {
-		color: $default-font-color;
+		color: white;
 	}
 	a span {
 		color: white;
@@ -61,5 +61,9 @@ body.dark-mode {
 	}
 	a:hover {
 		color: $primary-btn-color;
+	}
+
+	li a {
+		color: white;
 	}
 }
