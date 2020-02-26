@@ -6,63 +6,47 @@ import headerStyles from './header.module.scss';
 import './Header.scss'; // darkmode styles
 
 interface HeaderProps {
-  siteTitle: string;
+	siteTitle: string;
 }
 
 const Header = ({ siteTitle }: HeaderProps) => (
-  <header className={headerStyles.header}>
-    <div className={headerStyles.toggleContainer}>
-      <DarkModeToggle />
-    </div>
-    <nav>
-      <ul className={headerStyles.navList}>
-        <li>
-          <Link
-            to="/"
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/projects/"
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/cv/"
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
-          >
-            CV
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact/"
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+	<header className={headerStyles.header}>
+		<div className={headerStyles.toggleContainer}>
+			<DarkModeToggle />
+		</div>
+		<nav>
+			<ul className={headerStyles.navList}>
+				<li>
+					<Link to="/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
+						<span>Home</span>
+					</Link>
+				</li>
+				<li>
+					<Link to="/projects/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
+						<span>Projects</span>
+					</Link>
+				</li>
+				<li>
+					<Link to="/cv/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
+						<span>CV</span>
+					</Link>
+				</li>
+				<li>
+					<Link to="/contact/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
+						<span>Contact</span>
+					</Link>
+				</li>
+			</ul>
+		</nav>
+	</header>
 );
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+	siteTitle: PropTypes.string
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+	siteTitle: ``
 };
 
 export default Header;

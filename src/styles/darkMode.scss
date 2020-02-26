@@ -24,13 +24,13 @@ body.light-mode {
 		padding-bottom: .3rem;
 	}
 	a span {
-		color: $primary-btn-color;
+		color: #333;
 		&:hover {
 			color: white;
 		}
 	}
 	a:hover {
-		color: white;
+		color: $primary-btn-color;
 	}
 }
 
@@ -64,5 +64,11 @@ body.dark-mode {
 
 	a span {
 		color: white;
+		&:hover {
+			color: #333;
+		}
+	}
+	a:hover {
+		color: $primary-btn-color;
 	}
 }

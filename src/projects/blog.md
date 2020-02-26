@@ -30,3 +30,22 @@ It's a Headless React blog created with Gatsby and GraphQL. For post sourcing it
     <img src="https://img.shields.io/badge/deployment-Netlify-aqua?style=flat&logo=Netlify" />
     <img src="https://img.shields.io/badge/versioning-Git-red?style=flat&logo=Git" />
 </p>
+
+
+## PWA
+
+Progressive web app with offline capabilities.
+
+## Headless
+
+Content comes from Contenful CMS. GrapQL to the rescue.
+
+## Contact form
+
+Includes spam filters and Captcha
+
+## RSS feed
+
+## Responsive asymetric layout (header, footer)
+
+## Typography driven design
