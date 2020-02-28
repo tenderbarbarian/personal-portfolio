@@ -6,6 +6,7 @@
 	display: flex;
 	width: 100%;
 	flex-grow: 1;
+	max-width: 100%;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -23,12 +24,14 @@
 }
 .left {
 	display: flex;
+	flex-grow: 1;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
 	width: 100%;
 	@media (min-width: 1000px) {
 		width: 50%;
+		min-width: 50%;
 		float: left;
 		padding: $s-size;
 	}
@@ -36,11 +39,12 @@
 	a {
 		margin: 3px;
 	}
-	p {
-		margin: $s-size $s-size 3px 3px;
-	}
 }
 .right {
+	display: flex;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 100%;
 	@media (min-width: 1000px) {
 		width: 50%;
 		float: left;
@@ -51,15 +55,26 @@
 	}
 	img {
 		display: flex;
+		flex-grow: 1;
+		width: 100%;
 		background-size: cover;
+		@media (min-width: 500px) {
+			max-width: 80%;
+		}
+	}
+	iframe {
+		display: flex;
+		flex-grow: 1;
+		// background-size: cover;
+		// width: 100%;
+		// min-width: 100%;
+		// max-width: 100%;
 	}
 }
 
 .tech-list {
 	display: flex;
 	flex-wrap: wrap;
-	color: black;
-	font-size: .8rem;
 }
 .externalLinkList {
 	display: flex;
@@ -72,12 +87,12 @@
 }
 .card-description {
 	color: $arsenic;
-	font-size: $u-size;
+	font-size: $s-size;
 	text-decoration: none;
-	margin: 3px;
-	@media (min-width: 440px) {
-		margin-bottom: $s-size;
-	}
+	margin: $s-size $s-size $s-size 3px;
+	// @media (min-width: 440px) {
+	// 	margin-bottom: $s-size;
+	// }
 }
 
 // .card-tech-item {
@@ -93,8 +108,8 @@
 .card-tech-item {
 	margin: 0 3px;
 	padding: 0 3px;
-	font-size: .6rem;
-	line-height: .9rem;
+	font-size: .8rem;
+	line-height: 1rem;
 	opacity: .7;
 	color: white;
 	background: $default-font-color;
