@@ -3,7 +3,7 @@ layout: page
 title: 'Katarzyna Pohl - Portfolio'
 code: 'https://github.com/tenderbarbarian/'
 description: 'PWA with fluid images, dark mode, data sourcing from Markdown and through GraphQL'
-tech: ["React", "Typescript", "Gatsby", "GraphQL", "SCSS"]
+tech: ["React", "Typescript", "Gatsby", "GraphQL", "Sass"]
 date: '2020-01-06'
 featuredImage: "./portfolio1.jpg"
 ---
@@ -17,11 +17,11 @@ __Table of content:__
 - [Responsive](#responsive)
 - [PWA](#pwa)
 - [Syntax highlighting](#syntax-highlighting)
-- [Strained eyes? DarkMode to the rescue!](#strained-eyes-darkmode-to-the-rescue)
-- [Static pages](#static-pages)
+- [Dark mode](#dark-mode)
+- [GraphQL & Markdown](#graphql--markdown)
 - [Parallax Tilt Effect](#parallax-tilt-effect)
-- [Super light weight contact form](#super-light-weight-contact-form)
-- [Speedy, optimized images](#speedy-optimized-images)
+- [Contact form](#contact-form)
+- [Speedy, optimized, responsive images](#speedy-optimized-responsive-images)
 
 <!-- /TOC -->
 <!-- ![portfolioCard](./kpohl.jpg) -->
@@ -43,19 +43,21 @@ This is a feature-rich portfolio project; with many things like SEO, speedy, opt
 </p>
 
 ## Highly optimized
+
 Despite being heavily SEO optimized performance and accessibility have also been a major factor when implementing this portfolio. This leads to a great Lighthouse result.
 
 ## Responsive
-This portfolio is optimized for phones, tablets and desktops.
+
+This portfolio is optimized for phones, tablets and desktops. The styling is done with CSS3 postprocessor Sass.
 
 ## PWA
 
-Implements Progressive Web Apps features. With the help of manifest and web workers we get a product that functions offline and where wifi is unreliable. 
+Implements Progressive Web Apps features (i.e. offline capability). With the help of manifest and web workers we get a product that functions offline and where wifi is unreliable. 
 
 ## Syntax highlighting
-Code properly formatted is automatically highlighted by gatsby-remark-prismjs. The code lines are numbered and languages labeled for clarity.
+Code properly formatted is automatically highlighted with Prism. The code lines are numbered and languages labeled for clarity.
 
-Which gives us the desired effect: 
+Which gives us the following effect: 
 
 ~~~javascript
 class Person {
@@ -72,12 +74,12 @@ class Person {
 ~~~
 
 
-## Strained eyes? DarkMode to the rescue!
+## Dark mode
 
-By implementing a custom `use-dark-mode` React Hook and `.dark-mode` and `.light-mode` css classes, I've arrived at the two different switchable styles. After adding a toggle switch on the right side of the header, we get a fully functioning customizable dark/light mode. 
+Strained eyes? DarkMode to the rescue! By implementing a custom `use-dark-mode` React Hook and `.dark-mode` and `.light-mode` css classes, I've arrived at the two different switchable styles. After adding a toggle switch on the right side of the header, we get a fully functioning customizable dark/light mode. 
 
-## Static pages
-Project pages are build with GraphQL from markdown files within `src/projects` into static pages. Static pages are linked automatically, and they have ability to embed responsive video and codepen components. As well as syntax highlighting for codebase.
+## GraphQL & Markdown
+To glue it all the site relies on GraphQL. It queries the content, and generates static pages  from markdown files (the .md files are located in the `src/projects` directory). Static pages are linked automatically, and they have ability to embed responsive video as well as codepen components if needed. 
 
 ## Parallax Tilt Effect
 Hopefully, you enjoyed playing with the tilt card on home page, I know I did. It's intended to be fun and playful. And honestly I had great time implementing it as well.
@@ -97,11 +99,11 @@ And below the card there's an additional shadow:
 box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
 ```
 
-## Super light weight contact form
+## Contact form
 
-Using a tiny `react-hook-form` library definitely improved my process of arriving at a super light weight great preforming contact form. In comparison, Redux-form and Formik give a less pleasant developer experience and trigger more rerendering.
+Super light weight form uses a tiny `react-hook-form` library definitely improved my process of arriving at a super light weight great preforming contact form. In comparison, Redux-form and Formik give a less pleasant developer experience and trigger more rerendering.
 
-## Speedy, optimized images
+## Speedy, optimized, responsive images
 
 I've been playing with `gatsby-image`. It is a React component specially designed to work seamlessly with Gatsby’s GraphQL queries. It combines Gatsby’s native image processing capabilities (pretty slick) with advanced image loading techniques to easily and completely optimize image loading. 
 
@@ -130,8 +132,5 @@ const Image = () => (
 
 The gatsby-image component automatically sets up the “blur-up” effect as well as lazy loading of images further down the screen. And then it displays to the user different images at different breakpoints, it's pretty sweet.
 
-And we are done! 
-
- If you'd like to learn more or have any questions please feel free to contact me.
- Oh, and feel free to give it star on GitHub if you like.
-
+If you'd like to learn more or have any questions please feel free to contact me.
+Oh, and feel free to give it star on GitHub if you like.

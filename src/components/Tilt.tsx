@@ -25,7 +25,7 @@ const Parallax = () => {
 			className={tiltStyles.trackOnWindow}
 			perspective={500}
 			glareEnable={true}
-			glareMaxOpacity={0.75}
+			glareMaxOpacity={0.25}
 			glarePosition="all"
 			scale={scale}
 			trackOnWindow={false}
@@ -41,9 +41,15 @@ const Parallax = () => {
 				</p>
 				<div className={tiltStyles.shape}>
 					<div>
-						<IconLink url={data.site.siteMetadata.github} icon={[ 'fab', 'github' ]} />
-						<IconLink url={`mailto:${data.site.siteMetadata.email}`} icon={faEnvelope} />
-						<IconLink url={data.site.siteMetadata.linkedin} icon={[ 'fab', 'linkedin' ]} />
+						<strong>
+							<IconLink url={data.site.siteMetadata.github} icon={[ 'fab', 'github' ]} />
+						</strong>
+						<strong>
+							<IconLink url={`mailto:${data.site.siteMetadata.email}`} icon={faEnvelope} />
+						</strong>
+						<strong>
+							<IconLink url={data.site.siteMetadata.linkedin} icon={[ 'fab', 'linkedin' ]} />
+						</strong>
 					</div>
 				</div>
 				<div className={tiltStyles.featuredLinks}>

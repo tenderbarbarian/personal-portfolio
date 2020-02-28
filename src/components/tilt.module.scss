@@ -8,19 +8,16 @@
 	align-items: center;
 	width: 300px;
 	height: 200px;
-	background-image: url("../images/snow.jpg");
-	background-color: $suva-grey;
-	border: 1px solid $suva-grey;
-	border-radius: 5px;
+	background-image: url("../images/grunge.jpg");
+	background-color: $night-rider;
+	border: 1px solid $night-rider;
+	border-radius: 3px;
 	margin: 0 0 5 rem 0;
 	transform-style: preserve-3d;
-	box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
-
 	@media (min-width: 450px) {
 		width: 400px;
 		height: 240px;
 	}
-
 	@media (min-width: 640px) {
 		width: 500px;
 		height: 300px;
@@ -29,7 +26,6 @@
 		width: 600px;
 		height: 350px;
 	}
-
 	.inner-element {
 		display: flex;
 		flex-direction: column;
@@ -58,6 +54,10 @@
 				margin: .3rem;
 			}
 		}
+		span {
+			// color: white;
+			color: $default-font-color;
+		}
 		a {
 			margin: 0 .5rem 0 0;
 			@media (min-width: 450px) {
@@ -85,7 +85,6 @@
 			}
 		}
 	}
-
 	&:after {
 		content: " ";
 		position: absolute;
@@ -97,42 +96,8 @@
 		box-shadow: 0 30px 20px rgba(0, 0, 0, .4);
 	}
 }
-
 .featuredLinks {
 	display: flex;
 	align-items: flex-start;
 	color: white;
-}
-
-.tilt-scale {
-	background-image: url("../images/snow.jpg");
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 300px;
-	height: 200px;
-	background-image: url("../images/snow.jpg");
-	background-color: $suva-grey;
-	border: 1px solid $suva-grey;
-	border-radius: 5px;
-	margin: 0 0 5 rem 0;
-	transform-style: preserve-3d;
-	box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
-
-	.header {
-		font-size: 38px;
-	}
-
-	.form {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-
-		input {
-			transform: scale(1.5);
-			height: 20px;
-			margin-right: 7px;
-		}
-	}
 }

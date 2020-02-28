@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import DarkModeToggle from './DarkModeToggle';
+import logo from '../images/favicon.ico';
 import headerStyles from './header.module.scss';
 import './Header.scss'; // darkmode styles
 
@@ -16,24 +17,25 @@ const Header = ({ siteTitle }: HeaderProps) => (
 		</div>
 		<nav>
 			<ul className={headerStyles.navList}>
+				<img src={logo} className={headerStyles.logo} alt={siteTitle} />
 				<li>
 					<Link to="/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
-						<span>Home</span>
+						Home
 					</Link>
 				</li>
 				<li>
 					<Link to="/projects/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
-						<span>Projects</span>
+						Projects
 					</Link>
 				</li>
 				<li>
 					<Link to="/cv/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
-						<span>CV</span>
+						CV
 					</Link>
 				</li>
 				<li>
 					<Link to="/contact/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
-						<span>Contact</span>
+						Contact
 					</Link>
 				</li>
 			</ul>
@@ -46,7 +48,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-	siteTitle: ``
+	siteTitle: `portfolio`
 };
 
 export default Header;

@@ -14,17 +14,16 @@ __Table of content:__
 
 - [Test login:](#test-login)
 - [What is it?](#what-is-it)
-- [Core functionality:](#core-functionality)
+- [Core functionality](#core-functionality)
 - [How It Works?](#how-it-works)
-        - [API Endpoints](#api-endpoints)
+    - [API Endpoints](#api-endpoints)
 - [How To Use?](#how-to-use)
     - [Authentication and general use](#authentication-and-general-use)
     - [Creating an expense](#creating-an-expense)
     - [Filtering/Sorting expenses](#filteringsorting-expenses)
     - [Editing an expense](#editing-an-expense)
     - [Removing an expense](#removing-an-expense)
-- [The following technologies have been used to achieve the end goal:](#the-following-technologies-have-been-used-to-achieve-the-end-goal)
-    - [To quote Oscar Wilde:](#to-quote-oscar-wilde)
+- [Technologies](#technologies)
 
 <!-- /TOC -->
 <p>
@@ -52,8 +51,8 @@ __Table of content:__
 
 MyBills App is a web app: a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
 
-## Core functionality:
-- login with __Google__
+## Core functionality
+- login
 - store expenses in database
 - add new expenses
 - edit existing expenses
@@ -67,7 +66,7 @@ MyBills App is a web app: a secure expense manager with authentication and user 
 
 User data is stored in the Firebase cloud. The accounts are authenticated via Google. Front-end is build with React, bundled with Webpack and styled with Sass. 
 
-#### API Endpoints
+### API Endpoints
 Endpoints | Functionality
 ------------ | -------------
 POST /auth/signup | Register a new user
@@ -123,7 +122,9 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 - Click on *Remove* on the pop-up to confirm the removal
 - You will be redirected to the dashboard upon removal.
 
-## The following technologies have been used to achieve the end goal:
+## Technologies
+
+The following technologies have been used to achieve the end goal
 
 - `React` for UI
 - `Redux` for managing state
@@ -139,11 +140,6 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 - `Git` & `GitHub` for version control
 - `Heroku` for deployment
 
-### To quote Oscar Wilde:
-
-> Anyone who lives within their means
-> suffers from a lack of imagination.
-
-However, I myself do not wish to overspend. Hence this app. Enjoy! If you want to explore, <a href='#Test-login'>there's test login</a>. 
-
 ![landingPageScreenshot](./mybills.jpg)
+
+And we are done! 

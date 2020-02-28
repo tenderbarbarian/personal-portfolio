@@ -9,11 +9,13 @@ export type Frontmatter = {
 	date?: string;
 	code?: string;
 	demo?: string;
-	tech: string[];
+	tech?: string[];
+	// tech?: Array<Tech>;
 	description?: string;
 	featuredImage?: {
-		childImageSharp: any;
+		childImageSharp?: any;
 	};
+	iframe?: string;
 };
 
 export type Node = {
@@ -34,9 +36,11 @@ export const Card = ({ node }: CardProps) => {
 		<li key={title} className={cardStyles.card}>
 			<div className={cardStyles.left}>
 				<h2>{title}</h2>
+				{/* <div className={cardStyles.techList}> */}
 				<div className={cardStyles.techList}>
 					{tech.map((t) => (
 						<div key={t} className={cardStyles.cardTechItem}>
+							{/* <img src={`https://img.shields.io/badge/${t}?style=flat&logo=${t}`} /> */}
 							{t}
 						</div>
 					))}
@@ -44,13 +48,13 @@ export const Card = ({ node }: CardProps) => {
 				<p className={cardStyles.cardDescription}>{description}</p>
 				<div className={cardStyles.externalLinkList}>
 					{code && (
-						<a href={code} target="_blank" rel="noopener noreferrer" className={cardStyles.linkButton}>
-							Github
+						<a href={code} target="_blank" rel="noopener noreferrer" className={cardStyles.borderButton}>
+							<span>Github</span>
 						</a>
 					)}
 					{demo && (
-						<a href={demo} target="_blank" rel="noopener noreferrer" className={cardStyles.linkButton}>
-							Live demo
+						<a href={demo} target="_blank" rel="noopener noreferrer" className={cardStyles.borderButton}>
+							<span>Live demo</span>
 						</a>
 					)}
 					<Link to={`${node.fields.slug}`} className={cardStyles.borderButton}>

@@ -22,22 +22,25 @@ const Layout = ({ children, image }: LayoutProps) => {
 					email
 					linkedin
 					github
+					siteLogo
 				}
 			}
 		}
 	`);
 	return (
-		// <div className={layoutStyles.picture}>
-		<div className={layoutStyles.container}>
+		// <React.Fragment className={layoutStyles.picture}>
+		<React.Fragment>
 			<Header siteTitle={data.site.siteMetadata.title} />
-			<div className={layoutStyles.box}>{children}</div>
-			<Footer
-				author={data.site.siteMetadata.author}
-				email={data.site.siteMetadata.email}
-				github={data.site.siteMetadata.github}
-				linkedin={data.site.siteMetadata.linkedin}
-			/>
-		</div>
+			<div className={layoutStyles.container}>
+				<div className={layoutStyles.box}>{children}</div>
+				<Footer
+					author={data.site.siteMetadata.author}
+					email={data.site.siteMetadata.email}
+					github={data.site.siteMetadata.github}
+					linkedin={data.site.siteMetadata.linkedin}
+				/>
+			</div>
+		</React.Fragment>
 	);
 };
 

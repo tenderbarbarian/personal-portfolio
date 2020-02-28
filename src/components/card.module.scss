@@ -2,15 +2,15 @@
 @import '../styles/components.scss';
 
 .card {
-	margin: 10px 3px $m-size 3px;
+	margin: 10px 3px $l-size 3px;
 	display: flex;
+	width: 100%;
+	flex-grow: 1;
 	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 	box-sizing: border-box;
 	text-align: left;
-	background: rgba(255, 255, 255, 0.5);
-	border-radius: 4px;
-	box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
-
 	a {
 		text-decoration: none;
 	}
@@ -25,7 +25,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: flex-start;
+	width: 100%;
 	@media (min-width: 1000px) {
 		width: 50%;
 		float: left;
@@ -34,6 +35,9 @@
 	padding: $s-size $s-size 0 $s-size;
 	a {
 		margin: 3px;
+	}
+	p {
+		margin: $s-size $s-size 3px 3px;
 	}
 }
 .right {
@@ -76,17 +80,25 @@
 	}
 }
 
+// .card-tech-item {
+
+//
+// 	font-size: $u-size;
+// 	margin: 3px;
+// 	opacity: .5;
+// 	a {
+// 		text-decoration: none;
+// 	}
+// }
 .card-tech-item {
-	background: $solitude;
-	border: 1px solid $suva-grey;
-	border-radius: 4px;
-	padding: 1px .8rem;
-	font-size: $u-size;
-	margin: 3px;
-	opacity: .5;
-	a {
-		text-decoration: none;
-	}
+	margin: 0 3px;
+	padding: 0 3px;
+	font-size: .6rem;
+	line-height: .9rem;
+	opacity: .7;
+	color: white;
+	background: $default-font-color;
+	border-radius: 3px;
 }
 
 .img-hover-zoom:hover img {

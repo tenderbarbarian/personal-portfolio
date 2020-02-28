@@ -1,3 +1,5 @@
+export const gatsbyHighlight: string;
+export const lineNumbers: string;
 export const linkButton: string;
 export const borderButton: string;
 export const iconButton: string;
@@ -6,6 +8,3 @@ export const trackOnWindow: string;
 export const innerElement: string;
 export const shape: string;
 export const featuredLinks: string;
-export const tiltScale: string;
-export const header: string;
-export const form: string;

@@ -46,8 +46,8 @@ $toggle-btn-focus-shadow: rgba(252, 251, 248, 0.3);
 }
 
 .react-toggle-track {
-	width: 50px;
-	height: 24px;
+	width: 46px;
+	height: 19px;
 	padding: 0;
 	border-radius: 30px;
 	background-color: #4d4d4d;
@@ -116,8 +116,8 @@ $toggle-btn-focus-shadow: rgba(252, 251, 248, 0.3);
 	position: absolute;
 	top: 1px;
 	left: 1px;
-	width: 22px;
-	height: 22px;
+	width: 17px;
+	height: 17px;
 	border: 1px solid #4d4d4d;
 	border-radius: 50%;
 	background-color: #fafafa;
@@ -137,13 +137,13 @@ $toggle-btn-focus-shadow: rgba(252, 251, 248, 0.3);
 }
 
 .react-toggle--focus .react-toggle-thumb {
-	-webkit-box-shadow: 0px 0px 3px 2px $toggle-btn-focus-shadow;
-	-moz-box-shadow: 0px 0px 3px 2px $toggle-btn-focus-shadow;
-	box-shadow: 0px 0px 2px 3px $toggle-btn-focus-shadow;
+	// -webkit-box-shadow: 0px 0px 3px 2px $toggle-btn-focus-shadow;
+	// -moz-box-shadow: 0px 0px 3px 2px $toggle-btn-focus-shadow;
+	// box-shadow: 0px 0px 2px 3px $toggle-btn-focus-shadow;
 }
 
 .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-	-webkit-box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
-	-moz-box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
-	box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
+	// -webkit-box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
+	// -moz-box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
+	// box-shadow: 0px 0px 5px 5px $toggle-btn-focus-shadow;
 }

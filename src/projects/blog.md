@@ -5,9 +5,9 @@ date: "2019-11-04"
 demo: 'https://optimistic-stonebraker-707e80.netlify.com/blog/null'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL, deployed with Netlify'
-tech: ["React", "Gatsby", "GraphQL", "SCSS", "Javascript"]
 featuredImage: "./headless.jpg"
 iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+tech: [ "React", "Gatsby", "GraphQL", "Sass", "Javascript"]
 ---
 
 <!-- <details>
@@ -64,10 +64,14 @@ Content comes from Contenful CMS. GrapQL to the rescue.
 
 ## Contact form
 
-Includes spam bot filters and Google Captcha.
+Lightweight and snappy responsive. Includes spam bot filters and Google Captcha.
 
 ## RSS feed
 
 ## Responsive asymetric layout (header, footer)
 
 ## Typography driven design
+
+
+If you'd like to learn more or have any questions please feel free to contact me.
+Oh, and feel free to give it star on GitHub if you like.

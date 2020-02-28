@@ -11,38 +11,76 @@ $xl-size: 4.8rem;
 
 // Responsive website
 $desktop-breakpoint: 45rem;
-
 $form-indentation: 110px;
 
 // Colors
+
+//NEUTRALS
 $anti-flash-white: #eaf4f4;
 $arsenic: #3c474b;
-$bittersweet: #ff4800;
-$firebug: #ff0800;
-$energize: #f47d0d;
 $charcoal: #484848;
 $gainsboro: #dbdbdb;
-$link-color: #02047c;
 $night-rider: #333333;
 $solitude: #fafafb;
-$sunny: #fff07c;
 $suva-grey: #8e8e8e;
 
-$border-color: $gainsboro;
+//bruised plum --------LIke
+// $bittersweet: #b8235a;
+// $firebug: #3d1635;
+// $energize: #e7627d;
+
+/// Grown Early
+// $bittersweet: #0ba360;
+// $firebug: #3cba92;
+// $energize: #13ff7d;
+
+///PURPLE RAIN -eeeeeeew
+// $bittersweet: #7804fc;
+// $firebug: #520df4;
+// $energize: #c494fa;
+
+/////////////////////////YOlK
+// $bittersweet: #fceb04;
+// $firebug: #f4dd0d;
+// $energize: #faf894;
+
+/// dusty mints
+// $bittersweet: #024d2b;
+$bittersweet: #024d47;
+$energize: #0e6079;
+// $firebug: #069e71;
+$firebug: #34b48e;
+
+///////////////////////FRESH MINT
+// $bittersweet: #04f4fc;
+// $firebug: #00ffb3;
+// $energize: #0df4af;
+
+///////////////////////// STRIPPER PINK
+// $bittersweet: #fc0480;
+// $firebug: #f40de1;
+// $energize: #ff0062;
+
+/////////////////////// LIME GREEN
+// $bittersweet: #9dff00;
+// $firebug: #00ff00;
+// $energize: #33f40d;
+
+/////////////////////// OLD
+// $bittersweet: #ff4800;
+// $firebug: #ff0800;
+// $energize: #f47d0d;
+
 $default-font-color: $night-rider;
 $secondary-font-color: $suva-grey;
-$login-btn-color: $bittersweet;
 $primary-btn-color: $bittersweet;
-$secondary-btn-color: $link-color;
-$table-header-bg: $solitude;
-$header: $solitude;
+$secondary-btn-color: $firebug;
 
 //Gradients
-$juicyOrange: linear-gradient(35deg, $energize 0%, $bittersweet);
-$sweetOrange: linear-gradient(35deg, $bittersweet 10%, $firebug);
-$fallingOrange: linear-gradient(0deg, $bittersweet 10%, $energize);
+// $juicy: linear-gradient(35deg, $energize 0%, $bittersweet 30%);
+$juicy: linear-gradient(-225deg, $firebug 20%, $energize 70%, $bittersweet 100%);
+$sweet: linear-gradient(35deg, $bittersweet, $energize 60%, $firebug); //header
+$falling: linear-gradient(0deg, $bittersweet 10%, $energize);
 
-// background: linear-gradient(to right, #403b4a, #bbbbb4);
-// background-image: linear-gradient(to right top, #fab823, #f9a315, #f68d0c, #f3770d, #ee5f13);
-// background-image: linear-gradient(135deg, #855edd 0%, #63afd3 100%); // purple blue
-// background: linear-gradient(45deg, #f47d0d, $bittersweet);
+$headerGradient: $sweet;
+$buttonGradient: $juicy;

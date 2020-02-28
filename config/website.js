@@ -12,7 +12,7 @@ const meta = {
 };
 
 const social = {
-	siteLogo: `src/static/logo.svg`,
+	siteLogo: `icons/icon-48x48.png`,
 	siteBanner: `${meta.siteUrl}/images/social-banner.png`
 };
 
