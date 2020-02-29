@@ -12,8 +12,9 @@ featuredImage: "./mybills.jpg"
 __Table of content:__
 <!-- TOC -->
 
-- [Test login:](#test-login)
 - [What is it?](#what-is-it)
+- [Core technologies](#core-technologies)
+- [Test login](#test-login)
 - [Core functionality](#core-functionality)
 - [How It Works?](#how-it-works)
     - [API Endpoints](#api-endpoints)
@@ -26,6 +27,11 @@ __Table of content:__
 - [Technologies](#technologies)
 
 <!-- /TOC -->
+## What is it?
+
+MyBills App is a web app: a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
+
+## Core technologies
 <p>
     <img src="https://img.shields.io/badge/framework-React-blue?style=flat&logo=react" />
     <img src="https://img.shields.io/badge/package--manager-Yarn-navy?style=flat&logo=yarn" />
@@ -42,14 +48,12 @@ __Table of content:__
 </p>
 
 
-## Test login:
+## Test login
 
 >__login__ : `mybills.app.test@gmail.com` <br>
 >__password__ : `123.app.test`
 
-## What is it?
 
-MyBills App is a web app: a secure expense manager with authentication and user accounts. The features include: private routing, form validation and database storage. To streamline the development and limit any potential bugs  the codebase includes tests with Jest and Ezyme.
 
 ## Core functionality
 - login

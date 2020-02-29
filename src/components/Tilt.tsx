@@ -6,6 +6,16 @@ import IconLink from '../components/IconLink';
 import tiltStyles from './tilt.module.scss';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import useDarkMode from 'use-dark-mode';
+
+// const DarkModeStatus = () => {
+//   const { value } = useDarkMode(false);
+
+//   return value ? 'Dark Mode' : 'Light Mode';
+// };
+
+// export default DarkModeStatus;
+
 const Parallax = () => {
 	const [ scale, setScale ] = useState(1.15);
 	const data = useStaticQuery(graphql`
@@ -20,13 +30,16 @@ const Parallax = () => {
 			}
 		}
 	`);
+	const { value } = useDarkMode(false);
+	console.log(value);
+
 	return (
 		<Tilt
 			className={tiltStyles.trackOnWindow}
 			perspective={500}
 			glareEnable={true}
-			glareMaxOpacity={0.25}
-			glarePosition="all"
+			glareMaxOpacity={0.8}
+			glarePosition="top"
 			scale={scale}
 			trackOnWindow={false}
 			transitionSpeed={2500}
@@ -35,10 +48,10 @@ const Parallax = () => {
 			tiltMaxAngleY={45}
 		>
 			<div className={tiltStyles.innerElement}>
-				<h1>{data.site.siteMetadata.author}</h1>
-				<p>
-					<span>Frontend developer</span>
-				</p>
+				<h1>
+					<strong>{data.site.siteMetadata.author}</strong>
+				</h1>
+				<p>Frontend developer</p>
 				<div className={tiltStyles.shape}>
 					<div>
 						<strong>
@@ -53,11 +66,11 @@ const Parallax = () => {
 					</div>
 				</div>
 				<div className={tiltStyles.featuredLinks}>
-					<Link to="/projects/" className={tiltStyles.linkButton}>
-						Projects
+					<Link to="/projects/" className={tiltStyles.tiltButton}>
+						<span>Projects</span>
 					</Link>
-					<Link to="/cv/" className={tiltStyles.linkButton}>
-						CV
+					<Link to="/cv/" className={tiltStyles.tiltButton}>
+						<span>CV</span>
 					</Link>
 				</div>
 			</div>

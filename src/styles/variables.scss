@@ -45,11 +45,9 @@ $suva-grey: #8e8e8e;
 // $energize: #faf894;
 
 /// dusty mints
-// $bittersweet: #024d2b;
-$bittersweet: #024d47;
-$energize: #0e6079;
-// $firebug: #069e71;
-$firebug: #34b48e;
+// $bittersweet: #024d47;
+// $energize: #0e6079;
+// $firebug: #34b48e;
 
 ///////////////////////FRESH MINT
 // $bittersweet: #04f4fc;
@@ -57,14 +55,14 @@ $firebug: #34b48e;
 // $energize: #0df4af;
 
 ///////////////////////// STRIPPER PINK
-// $bittersweet: #fc0480;
-// $firebug: #f40de1;
-// $energize: #ff0062;
+$bittersweet: #fc0404;
+$firebug: #f40de1;
+$energize: #ff5100;
 
 /////////////////////// LIME GREEN
-// $bittersweet: #9dff00;
-// $firebug: #00ff00;
-// $energize: #33f40d;
+// $bittersweet: #a0f8b6;
+// $firebug: #52dddd;
+// $energize: #8df85b;
 
 /////////////////////// OLD
 // $bittersweet: #ff4800;
@@ -78,9 +76,9 @@ $secondary-btn-color: $firebug;
 
 //Gradients
 // $juicy: linear-gradient(35deg, $energize 0%, $bittersweet 30%);
-$juicy: linear-gradient(-225deg, $firebug 20%, $energize 70%, $bittersweet 100%);
+$juicy: linear-gradient(35deg, $firebug, $energize 50%, $bittersweet 100%); //buttons
 $sweet: linear-gradient(35deg, $bittersweet, $energize 60%, $firebug); //header
-$falling: linear-gradient(0deg, $bittersweet 10%, $energize);
+$falling: linear-gradient(75deg, $firebug, $energize 60%, $bittersweet 100%);
 
 $headerGradient: $sweet;
 $buttonGradient: $juicy;

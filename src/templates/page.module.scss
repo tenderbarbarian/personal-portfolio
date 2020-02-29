@@ -23,6 +23,14 @@
 	}
 }
 
+.markdown {
+	img {
+		padding: 1px;
+		border: 1px solid $suva-grey;
+		border-radius: 3px;
+	}
+}
+
 .topLinks {
 	// margin-bottom: $s-size;
 	display: flex;

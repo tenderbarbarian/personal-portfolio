@@ -7,11 +7,16 @@ body.light-mode {
 		color: rgb(17, 17, 17);
 	}
 	h1 {
-		color: $default-font-color;
-		background-image: linear-gradient(to left, $energize 0%, $firebug 31%, $bittersweet 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		padding-bottom: .3rem;
+		// color: $default-font-color;
+		// background-image: linear-gradient(35deg, $bittersweet 10%, $energize 100%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
+		// padding-bottom: .3rem;
+	}
+	h1 strong {
+		// background-image: linear-gradient(to left, $energize 0%, $firebug 31%, $bittersweet 100%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
 	}
 	a {
 		// color: $default-font-color;
@@ -34,14 +39,19 @@ body.dark-mode {
 	background-color: #1b1b1b;
 	color: #dfdfdf;
 	h1 {
-		background-image: linear-gradient(to left, $firebug, $energize 30%, $bittersweet 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		// background-image: linear-gradient(35deg, $firebug 70%, $energize 100%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
 		padding-bottom: .3rem;
+	}
+	h1 strong {
+		// background-image: linear-gradient(125deg, $firebug 1%, white 100%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
 	}
 
 	p span {
-		color: $default-font-color;
+		color: $firebug;
 	}
 	p {
 		color: white;

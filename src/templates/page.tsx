@@ -36,7 +36,7 @@ const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 				</div>
 			</div>
 			{/* eslint-disable-next-line react/no-danger */}
-			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+			<div className={pageStyles.markdown} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			<div className={pageStyles.topLinks}>
 				{data.markdownRemark.frontmatter.code && (
 					<a
