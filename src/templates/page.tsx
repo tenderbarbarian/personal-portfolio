@@ -45,7 +45,7 @@ const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 						rel="noopener noreferrer"
 						className={pageStyles.borderButton}
 					>
-						Github
+						<span>Github</span>
 					</a>
 				)}
 				{data.markdownRemark.frontmatter.demo && (
@@ -55,7 +55,7 @@ const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 						rel="noopener noreferrer"
 						className={pageStyles.borderButton}
 					>
-						Live demo
+						<span>Live demo</span>
 					</a>
 				)}
 			</div>
