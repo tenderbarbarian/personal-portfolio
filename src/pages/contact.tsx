@@ -63,9 +63,9 @@ const ContactForm = ({ email }) => {
 		<form
 			onSubmit={handleSubmit(onSubmit)}
 			className={contactStyles.form}
-			name="contact"
+			name="contactFromPortfolio"
 			method="post"
-			// netlify
+			netlify
 			// netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
