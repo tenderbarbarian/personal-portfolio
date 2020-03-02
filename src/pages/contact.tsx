@@ -5,19 +5,21 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { string } from 'prop-types';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6';
 const encode = (data) => {
 	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
 };
-type FormData = {
-	name: string;
-	email: string;
-	text: string;
-};
+// type FormData = {
+// 	name: string;
+// 	email: string;
+// 	text: string;
+// 	g-recaptcha-response: string;
+// };
 
 const ContactForm = ({ email }) => {
-	const { register, handleSubmit, errors, setValue, setError } = useForm<FormData>();
+	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -29,7 +31,7 @@ const ContactForm = ({ email }) => {
 		},
 		[ register ]
 	);
-	const onSubmit = (data: FormData, e: React.SyntheticEvent): void => {
+	const onSubmit = (data, e) => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
