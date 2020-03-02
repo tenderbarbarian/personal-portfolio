@@ -66,9 +66,9 @@ const ContactForm = ({ email }) => {
 			name="contactFromPortfolio"
 			method="post"
 			netlify
-			// netlify-honeypot="bot-field"
+			netlify-honeypot="bot-field"
 			data-netlify="true"
-			data-netlify-honeypot="bot-field"
+			// data-netlify-honeypot="bot-field"
 			// data-netlify-recaptcha="true"
 			action="/thanks"
 		>
