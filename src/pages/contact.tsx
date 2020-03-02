@@ -25,7 +25,7 @@ const ContactForm = () => {
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
-		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		// console.log(JSON.stringify(data));
 		if (!captchaValue) {
 			console.log('CAPTCHA missing!');
@@ -115,9 +115,9 @@ const ContactForm = () => {
 					ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
-						// console.log('ReCAPTCHA onChange: ', val);
+						console.log('ReCAPTCHA onChange: ', val);
 						setValue('g-recaptcha-response', val, true);
-						// console.log('end');
+						console.log('end');
 					}}
 				/>
 				{feedbackMsg && <h3>{feedbackMsg}</h3>}
