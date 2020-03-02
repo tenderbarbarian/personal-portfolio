@@ -31,7 +31,7 @@ const Parallax = () => {
 		}
 	`);
 	const { value } = useDarkMode(false);
-	console.log(value);
+	// console.log(value);
 
 	return (
 		<Tilt

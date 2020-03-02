@@ -32,8 +32,8 @@ const ContactForm = ({ email }) => {
 	const onSubmit = (data: FormData, e: React.SyntheticEvent): void => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
-		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
-		console.log(JSON.stringify(data));
+		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		// console.log(JSON.stringify(data));
 		if (!captchaValue) {
 			console.log('CAPTCHA missing!');
 			setFeedbackMsg('Captcha is required');
@@ -49,7 +49,7 @@ const ContactForm = ({ email }) => {
 			})
 		})
 			.then((response) => {
-				console.log({ response });
+				// console.log({ response });
 				e.target.reset();
 				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
 			})
@@ -110,23 +110,23 @@ const ContactForm = ({ email }) => {
 				/>
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>Please enter your message</span>}
-			<ReCAPTCHA
-				name="g-recaptcha-response"
-				ref={captchaRef}
-				sitekey={RECAPTCHA_KEY}
-				onChange={(val) => {
-					// console.log('ReCAPTCHA onChange: ', val);
-					setValue('g-recaptcha-response', val, true);
-					// console.log('end');
-				}}
-			/>
-			{feedbackMsg && <h3>{feedbackMsg}</h3>}
 			<div className={contactStyles.submitContainer}>
+				<ReCAPTCHA
+					name="g-recaptcha-response"
+					ref={captchaRef}
+					sitekey={RECAPTCHA_KEY}
+					onChange={(val) => {
+						// console.log('ReCAPTCHA onChange: ', val);
+						setValue('g-recaptcha-response', val, true);
+						// console.log('end');
+					}}
+				/>
+				{feedbackMsg && <h3>{feedbackMsg}</h3>}
 				<button className={contactStyles.linkButton}>Send message</button>
+				<small>
+					<a href={`mailto:${email}`}>or email me at {email}</a>
+				</small>
 			</div>
-			<small>
-				<a href={`mailto:${email}`}>or email me at {email}</a>
-			</small>
 		</form>
 	);
 };

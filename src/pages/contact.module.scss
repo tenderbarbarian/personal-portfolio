@@ -4,9 +4,9 @@
 .form {
 	display: flex;
 	flex-direction: column;
-	padding: $m-size;
+	padding: 1rem;
 	@media (min-width: 800px) {
-		padding: $l-size;
+		padding: $s-size;
 	}
 	label {
 		min-width: $form-indentation;
@@ -21,9 +21,6 @@
 		display: inline-block;
 		margin: 0;
 		padding: 0;
-		@media (min-width: 650px) {
-			margin-left: $form-indentation;
-		}
 	}
 	small a {
 		color: $primary-btn-color;
@@ -68,11 +65,11 @@
 .submitContainer {
 	margin: 0;
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	justify-content: flex-start;
 	@media (min-width: $desktop-breakpoint) {
-		margin: 0 0 0 $form-indentation;
-		flex-direction: row;
-		align-items: center;
+		margin-left: $form-indentation;
+		// flex-direction: row;
+		// align-items: center;
 	}
 }
