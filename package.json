@@ -58,12 +58,10 @@
 		"prettier": "^1.18.2",
 		"typescript": "^3.6.3"
 	},
-	"keywords": [
-		"gatsby"
-	],
+	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
-		"build": "env-cmd  gatsby build",
+		"build": "env-cmd -f .env gatsby build",
 		"develop": "env-cmd -f .env gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "npm run develop",
