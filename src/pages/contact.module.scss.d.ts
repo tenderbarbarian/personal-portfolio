@@ -9,4 +9,3 @@ export const errorMessage: string;
 export const formEntry: string;
 export const formInput: string;
 export const submitContainer: string;
-export const styledCheckbox: string;

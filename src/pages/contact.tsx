@@ -1,30 +1,77 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
+import ReCAPTCHA from 'react-google-recaptcha';
 
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6LdAE9wUAAAAAEQ8KqT20g_4E507K9s0m3AwPJvJ';
+const encode = (data) => {
+	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+};
 type FormData = {
 	name: string;
 	email: string;
 	text: string;
-	// copy: boolean;
 };
 
 const ContactForm = ({ email }) => {
-	const { register, handleSubmit, errors } = useForm<FormData>();
-
-	const onSubmit = (data: FormData, e: React.SyntheticEvent): void => {
-		// const { name, email, text, copy } = data;
-		alert(JSON.stringify(data));
-		e.target.reset(); // reset after form submit
-	};
+	const { register, handleSubmit, errors, setValue, setError } = useForm<FormData>();
+	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+	let captchaRef = useRef(null);
+
+	useEffect(
+		() => {
+			register({ required: 'Required', name: 'g-recaptcha-response' });
+		},
+		[ register ]
+	);
+	const onSubmit = (data: FormData, e: React.SyntheticEvent): void => {
+		e.preventDefault();
+		const captchaValue = captchaRef.current.getValue();
+		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		console.log(JSON.stringify(data));
+		if (!captchaValue) {
+			console.log('CAPTCHA missing!');
+			setFeedbackMsg('Captcha is required');
+			return;
+		}
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': 'contact',
+				'g-recaptcha-response': captchaValue,
+				...data
+			})
+		})
+			.then((response) => {
+				console.log({ response });
+				e.target.reset();
+				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
+			})
+			.catch((error) => {
+				setFeedbackMsg('Oops, something went wrong. The form could not be submitted.');
+				console.log(error);
+			});
+	};
+
 	return (
-		// <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-		<form onSubmit={handleSubmit(onSubmit)} className={contactStyles.form}>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className={contactStyles.form}
+			name="contact"
+			method="post"
+			netlify
+			netlify-honeypot="bot-field"
+			data-netlify="true"
+			data-netlify-honeypot="bot-field"
+			data-netlify-recaptcha="true"
+			action="/thanks"
+		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
 			<div className={contactStyles.formEntry}>
@@ -63,18 +110,19 @@ const ContactForm = ({ email }) => {
 				/>
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>Please enter your message</span>}
+			<ReCAPTCHA
+				name="g-recaptcha-response"
+				ref={captchaRef}
+				sitekey={RECAPTCHA_KEY}
+				onChange={(val) => {
+					// console.log('ReCAPTCHA onChange: ', val);
+					setValue('g-recaptcha-response', val, true);
+					// console.log('end');
+				}}
+			/>
+			{feedbackMsg && <h3>{feedbackMsg}</h3>}
 			<div className={contactStyles.submitContainer}>
 				<button className={contactStyles.linkButton}>Send message</button>
-				{/* <div>
-					<input
-						type="checkbox"
-						id="copy"
-						name="copy"
-						ref={register({ required: false })}
-						className={contactStyles.styledCheckbox}
-					/>
-					<label>Send me a copy</label>
-				</div> */}
 			</div>
 			<small>
 				<a href={`mailto:${email}`}>or email me at {email}</a>
