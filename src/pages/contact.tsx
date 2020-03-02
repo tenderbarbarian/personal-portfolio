@@ -45,7 +45,7 @@ const ContactForm = ({ email }) => {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
-				'form-name': 'contactFromPortfolio',
+				'form-name': 'contact',
 				'g-recaptcha-response': captchaValue,
 				...data
 			})
@@ -66,16 +66,16 @@ const ContactForm = ({ email }) => {
 		<form
 			onSubmit={handleSubmit(onSubmit)}
 			className={contactStyles.form}
-			name="contactFromPortfolio"
+			name="contact"
 			method="post"
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
-			// data-netlify-honeypot="bot-field"
+			data-netlify-honeypot="bot-field"
 			data-netlify-recaptcha="true"
 		>
 			<input type="hidden" name="bot-field" />
-			<input type="hidden" name="form-name" value="contactFromPortfolio" />
+			<input type="hidden" name="form-name" value="contact" />
 			<div className={contactStyles.formEntry}>
 				<label>Name</label>
 				<input
