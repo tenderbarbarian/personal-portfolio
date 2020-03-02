@@ -43,7 +43,7 @@ const ContactForm = ({ email }) => {
 		}
 		fetch('/', {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cache-Control': 'no-cache' },
 			body: encode({
 				'form-name': 'contact',
 				'g-recaptcha-response': captchaValue,
@@ -52,7 +52,8 @@ const ContactForm = ({ email }) => {
 		})
 			.then((response) => {
 				console.log('RESPONSE:');
-				console.log({ response });
+				// console.log({ response });
+				console.log(`${JSON.stringify(response, null, 2)}`);
 				e.target.reset();
 				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
 			})
