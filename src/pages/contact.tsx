@@ -34,17 +34,17 @@ const ContactForm = ({ email }) => {
 		const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		// console.log(JSON.stringify(data));
-		if (!captchaValue) {
-			console.log('CAPTCHA missing!');
-			setFeedbackMsg('Captcha is required');
-			return;
-		}
+		// if (!captchaValue) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': captchaValue,
+				// 'g-recaptcha-response': captchaValue,
 				...data
 			})
 		})
@@ -68,8 +68,8 @@ const ContactForm = ({ email }) => {
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
-			data-netlify-honeypot="bot-field"
-			data-netlify-recaptcha="true"
+			// data-netlify-honeypot="bot-field"
+			// data-netlify-recaptcha="true"
 		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
@@ -110,7 +110,7 @@ const ContactForm = ({ email }) => {
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>Please enter your message</span>}
 			<div className={contactStyles.submitContainer}>
-				<ReCAPTCHA
+				{/* <ReCAPTCHA
 					name="g-recaptcha-response"
 					ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
@@ -119,7 +119,7 @@ const ContactForm = ({ email }) => {
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
-				/>
+				/> */}
 				{feedbackMsg && <h3>{feedbackMsg}</h3>}
 				<button className={contactStyles.linkButton}>Send message</button>
 				<small>
