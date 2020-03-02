@@ -16,12 +16,12 @@ const ContactForm = () => {
 	// const [ captcha, setCaptcha ] = useState(null);
 	let captchaRef = useRef(null);
 
-	useEffect(
-		() => {
-			register({ required: 'Required', name: 'g-recaptcha-response' });
-		},
-		[ register ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		register({ required: 'Required', name: 'g-recaptcha-response' });
+	// 	},
+	// 	[ register ]
+	// );
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		// const captchaValue = captchaRef.current.getValue();
