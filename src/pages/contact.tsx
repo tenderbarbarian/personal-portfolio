@@ -119,6 +119,7 @@ const ContactForm = ({ email }) => {
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
+					data-netlify-recaptcha="true"
 				/>
 				{feedbackMsg && <h3>{feedbackMsg}</h3>}
 				<button className={contactStyles.linkButton}>Send message</button>
