@@ -118,9 +118,9 @@ const ContactForm = ({ email }) => {
 					ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
-						// console.log('ReCAPTCHA onChange: ', val);
+						console.log('ReCAPTCHA onChange: ', val);
 						setValue('g-recaptcha-response', val, true);
-						// console.log('end');
+						console.log('end');
 					}}
 					data-netlify-recaptcha="true"
 				/>

@@ -61,8 +61,8 @@
 	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
-		"build": "env-cmd gatsby build",
-		"develop": "env-cmd -f .env gatsby develop",
+		"build": "env-cmd yarn type-check && yarn lint && gatsby build",
+		"develop": "env-cmd -f .env NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "npm run develop",
 		"serve": "gatsby serve",
