@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Katarzyna Pohl - Portfolio'
-code: 'https://github.com/tenderbarbarian/'
+code: 'https://github.com/tenderbarbarian/personal-portfolio'
 description: 'PWA with fluid images, dark mode, data sourcing from Markdown and through GraphQL'
 tech: ["React", "Typescript", "Gatsby", "GraphQL", "Sass"]
 date: '2020-01-06'

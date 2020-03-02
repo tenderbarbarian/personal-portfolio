@@ -58,17 +58,14 @@
 		"prettier": "^1.18.2",
 		"typescript": "^3.6.3"
 	},
-	"keywords": [
-		"gatsby"
-	],
+	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
-		"build": "yarn type-check && yarn lint && gatsby build",
-		"develop": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https",
+		"build": "env-cmd gatsby build",
+		"develop": "env-cmd -f .env gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "npm run develop",
 		"serve": "gatsby serve",
-		"prebuild": "yarn lint && yarn test",
 		"lint": "eslint '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
 		"lint:fix": "eslint --fix '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
 		"type-check": "tsc --noEmit",
@@ -78,8 +75,5 @@
 	"bugs": {
 		"url": "https://github.com/gatsbyjs/gatsby/issues"
 	},
-	"contributors": [
-		"Mark Feng <markselbyfcy@gmail.com>"
-	],
 	"main": "index.js"
 }
