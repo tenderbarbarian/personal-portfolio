@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
-// import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6';
 const encode = (data) => {
