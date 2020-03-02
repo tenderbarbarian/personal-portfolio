@@ -24,20 +24,21 @@ const ContactForm = () => {
 	);
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		const captchaValue = captchaRef.current.getValue();
+		// const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		console.log(JSON.stringify(data));
-		if (!captchaValue) {
-			console.log('CAPTCHA missing!');
-			setFeedbackMsg('Captcha is required');
-			return;
-		}
-		fetch('/?no-cache=1', {
+		// if (!captchaValue) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
+		// // fetch('/?no-cache=1', {
+		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': captchaValue,
+				// 'g-recaptcha-response': captchaValue,
 				...data
 			})
 		})
@@ -57,11 +58,12 @@ const ContactForm = () => {
 			className={contactStyles.form}
 			name="contact"
 			method="post"
-			data-netlify-recaptcha="true"
+			// data-netlify-recaptcha="true"
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
+			action="/"
 		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
@@ -110,7 +112,7 @@ const ContactForm = () => {
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>please enter a message</span>}
 			<div className={contactStyles.submitContainer}>
-				<ReCAPTCHA
+				{/* <ReCAPTCHA
 					name="g-recaptcha-response"
 					ref={captchaRef}
 					sitekey="6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6"
@@ -119,7 +121,7 @@ const ContactForm = () => {
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
-				/>
+				/> */}
 				{feedbackMsg && <h3>{feedbackMsg}</h3>}
 				<button className={contactStyles.linkButton} type="submit">
 					Send message
