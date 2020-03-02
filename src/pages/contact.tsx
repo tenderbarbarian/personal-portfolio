@@ -26,13 +26,13 @@ const ContactForm = () => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
-		// console.log(JSON.stringify(data));
+		console.log(JSON.stringify(data));
 		if (!captchaValue) {
 			console.log('CAPTCHA missing!');
 			setFeedbackMsg('Captcha is required');
 			return;
 		}
-		fetch('/', {
+		fetch('/?no-cache=1', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
@@ -57,11 +57,11 @@ const ContactForm = () => {
 			className={contactStyles.form}
 			name="contact"
 			method="post"
+			data-netlify-recaptcha="true"
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
-			data-netlify-recaptcha="true"
 		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
@@ -113,7 +113,7 @@ const ContactForm = () => {
 				<ReCAPTCHA
 					name="g-recaptcha-response"
 					ref={captchaRef}
-					sitekey={RECAPTCHA_KEY}
+					sitekey="6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6"
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
 						setValue('g-recaptcha-response', val, true);
