@@ -24,7 +24,7 @@ const ContactForm = () => {
 	);
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		// const captchaValue = captchaRef.current.getValue();
+		const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		// console.log(JSON.stringify(data));
 		if (!captchaValue) {
