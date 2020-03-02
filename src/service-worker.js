@@ -57,14 +57,14 @@ self.addEventListener('push', function(event) {
 // });
 
 // ServiceWorker.js
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event, body) {
 	console.log('Fetch!', event);
 	// We will cache all POST requests to matching URLs
 	if (event.request.method === 'POST') {
 		console.log('POST!', event);
 		event.respondWith(
 			// First try to fetch the request from the server
-			fetch(event.request.clone())
+			fetch(event.request)
 				// If it works, put the response into IndexedDB
 				.then(function(response) {
 					// Compute a unique key for the POST request
