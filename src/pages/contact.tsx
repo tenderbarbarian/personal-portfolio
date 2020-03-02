@@ -68,9 +68,8 @@ const ContactForm = ({ email }) => {
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
-			// data-netlify-honeypot="bot-field"
-			// data-netlify-recaptcha="true"
-			action="/thanks"
+			data-netlify-honeypot="bot-field"
+			data-netlify-recaptcha="true"
 		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
