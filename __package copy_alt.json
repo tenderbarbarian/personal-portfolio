@@ -1,9 +1,9 @@
 {
-	"name": "Portfolio",
+	"name": "gatsby-starter-typescript-PWA",
 	"private": false,
-	"description": "A personal portfolio site",
+	"description": "A simple starter to get up and developing quickly with Gatsby, added TypeScript and PWA support",
 	"version": "1.0.0",
-	"author": "Katarzyna Pohl <ksoloduc@gmail.com>",
+	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.26",
 		"@fortawesome/free-brands-svg-icons": "^5.12.0",
@@ -13,7 +13,7 @@
 		"@reach/router": "^1.3.1",
 		"@types/react-toggle": "^4.0.2",
 		"core-js": "^3.6.4",
-		"gatsby": "^2.19.24",
+		"gatsby": "^2.15.28",
 		"gatsby-image": "^2.2.39",
 		"gatsby-plugin-catch-links": "^2.1.25",
 		"gatsby-plugin-manifest": "^2.2.20",
@@ -64,11 +64,18 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "env-cmd  gatsby build",
+		// "build": "env-cmd yarn type-check && yarn lint && gatsby build",
+		// "develop": "env-cmd -f .env NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https",
 		"develop": "env-cmd -f .env gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "npm run develop",
-		"serve": "gatsby serve"
+		"serve": "gatsby serve",
+		// "lint": "eslint '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
+		// "lint:fix": "eslint --fix '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
+		// "type-check": "tsc --noEmit",
+		// "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
 	},
+	"repository": "https://github.com/markselby9/gatsby-starter-default.git",
 	"bugs": {
 		"url": "https://github.com/gatsbyjs/gatsby/issues"
 	},
