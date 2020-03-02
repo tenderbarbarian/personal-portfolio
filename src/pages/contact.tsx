@@ -65,11 +65,11 @@ const ContactForm = ({ email }) => {
 			className={contactStyles.form}
 			name="contact"
 			method="post"
-			netlify
-			netlify-honeypot="bot-field"
+			// netlify
+			// netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
-			data-netlify-recaptcha="true"
+			// data-netlify-recaptcha="true"
 			action="/thanks"
 		>
 			<input type="hidden" name="bot-field" />
