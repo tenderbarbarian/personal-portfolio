@@ -8,7 +8,7 @@ import contactStyles from './contact.module.scss';
 ///////////////////****************** */
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6LdAE9wUAAAAAEQ8KqT20g_4E507K9s0m3AwPJvJ';
+// const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6';
 const encode = (data) => {
 	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
 };
@@ -16,7 +16,7 @@ const ContactForm = () => {
 	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	// const [ captcha, setCaptcha ] = useState(null);
-	let captchaRef = useRef(null);
+	// let captchaRef = useRef(null);
 
 	useEffect(
 		() => {
@@ -26,14 +26,14 @@ const ContactForm = () => {
 	);
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		const captchaValue = captchaRef.current.getValue();
-		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
-		// console.log(JSON.stringify(data));
-		if (!captchaValue) {
-			console.log('CAPTCHA missing!');
-			setFeedbackMsg('Captcha is required');
-			return;
-		}
+		// const captchaValue = captchaRef.current.getValue();
+		// // console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		// // console.log(JSON.stringify(data));
+		// if (!captchaValue) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -63,7 +63,7 @@ const ContactForm = () => {
 			netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
-			data-netlify-recaptcha="true"
+			// data-netlify-recaptcha="true"
 		>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
@@ -111,7 +111,7 @@ const ContactForm = () => {
 				/>
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>please enter a message</span>}
-			<ReCAPTCHA
+			{/* <ReCAPTCHA
 				name="g-recaptcha-response"
 				ref={captchaRef}
 				sitekey={RECAPTCHA_KEY}
@@ -120,7 +120,7 @@ const ContactForm = () => {
 					setValue('g-recaptcha-response', val, true);
 					// console.log('end');
 				}}
-			/>
+			/> */}
 			{feedbackMsg && <h3>{feedbackMsg}</h3>}
 			<div className={contactStyles.submitContainer}>
 				<button className={contactStyles.linkButton} type="submit">
