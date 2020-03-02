@@ -23,12 +23,6 @@ module.exports = {
 				showSpinner: false
 			}
 		},
-		// {
-		// 	resolve: `gatsby-plugin-typography`,
-		// 	options: {
-		// 		pathToConfigModule: `src/utils/typography`
-		// 	}
-		// },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -95,12 +89,12 @@ module.exports = {
 				display: `standalone`,
 				icon: `src/images/favicon.png` // This path is relative to the root of the site.
 			}
+		},
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+				appendScript: require.resolve('./src/service-worker.js')
+			}
 		}
-		// {
-		// 	resolve: `gatsby-plugin-offline`,
-		// 	options: {
-		// 		appendScript: require.resolve('./src/service-worker.js')
-		// 	}
-		// }
 	]
 };

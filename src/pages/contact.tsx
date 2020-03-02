@@ -90,7 +90,7 @@ const ContactForm = ({ email }) => {
 			<div className={contactStyles.formEntry}>
 				<label>Email</label>
 				<input
-					type="text"
+					type="email"
 					name="email"
 					ref={register({
 						required: true,
