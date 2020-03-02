@@ -90,11 +90,12 @@ module.exports = {
 				icon: `src/images/favicon.png` // This path is relative to the root of the site.
 			}
 		},
-		{
-			resolve: `gatsby-plugin-offline`,
-			options: {
-				appendScript: require.resolve('./src/service-worker.js')
-			}
-		}
+		// {
+		// 	resolve: `gatsby-plugin-offline`,
+		// 	options: {
+		// 		appendScript: require.resolve('./src/service-worker.js')
+		// 	}
+		// }
+		`gatsby-plugin-remove-serviceworker`
 	]
 };
