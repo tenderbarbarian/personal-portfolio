@@ -16,15 +16,17 @@ export interface Content {
 
 const Projects = () => {
 	// markDown query
+	//(sort: { fields: date, order: DESC })
 	const data = useStaticQuery(graphql`
 		{
-			allMarkdownRemark {
+			allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
 				edges {
 					node {
 						frontmatter {
 							title
 							demo
 							code
+							date
 							featuredImage {
 								publicURL
 								size

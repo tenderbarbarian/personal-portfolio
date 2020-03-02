@@ -24,7 +24,6 @@ __Table of content:__
 - [Speedy, optimized, responsive images](#speedy-optimized-responsive-images)
 
 <!-- /TOC -->
-<!-- ![portfolioCard](./kpohl.jpg) -->
 
 ## What it it?
 
@@ -83,6 +82,7 @@ To glue it all the site relies on GraphQL. It queries the content, and generates
 
 ## Parallax Tilt Effect
 Hopefully, you enjoyed playing with the tilt card on home page, I know I did. It's intended to be fun and playful. And honestly I had great time implementing it as well.
+![portfolioCard](./portfolio.jpg)
 
 Curious as to how it works behind the scenes? 
 
