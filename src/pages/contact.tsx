@@ -34,8 +34,8 @@ const ContactForm = ({ email }) => {
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
-		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
-		// console.log(JSON.stringify(data));
+		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		console.log(JSON.stringify(data));
 		if (!captchaValue) {
 			console.log('CAPTCHA missing!');
 			setFeedbackMsg('Captcha is required');
@@ -45,12 +45,13 @@ const ContactForm = ({ email }) => {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
-				'form-name': 'contact',
+				'form-name': 'contactFromPortfolio',
 				'g-recaptcha-response': captchaValue,
 				...data
 			})
 		})
 			.then((response) => {
+				console.log('RESPONSE:');
 				console.log({ response });
 				e.target.reset();
 				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
