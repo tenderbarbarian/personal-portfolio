@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6LdAE9wUAAAAAEQ8KqT20g_4E507K9s0m3AwPJvJ';
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6Ldh5N0UAAAAAAdwyoX1v49CrbRSjzb3M464AYo6';
 const encode = (data) => {
 	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
 };
@@ -49,7 +49,7 @@ const ContactForm = ({ email }) => {
 			})
 		})
 			.then((response) => {
-				// console.log({ response });
+				console.log({ response });
 				e.target.reset();
 				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
 			})
