@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import contactStyles from './contact.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY || '6LeBIN4UAAAAAE9wBGIeLgnh-Kaqzntx0tcTWOw5';
 const encode = (data) => {
 	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
 };
