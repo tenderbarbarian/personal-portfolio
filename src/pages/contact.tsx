@@ -14,32 +14,37 @@ const ContactForm = () => {
 	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	const [ captcha, setCaptcha ] = useState(null);
-	let captchaRef = useRef(null);
+	// let captchaRef = useRef(null);
 
-	useEffect(
-		() => {
-			register({ required: 'Required', name: 'g-recaptcha-response' });
-		},
-		[ register ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		register({ required: 'Required', name: 'g-recaptcha-response' });
+	// 	},
+	// 	[ register ]
+	// );
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		const captchaValue = captchaRef.current.getValue();
+		// const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		console.log(JSON.stringify(data));
-		if (!captchaValue) {
+		if (!captcha) {
 			console.log('CAPTCHA missing!');
 			setFeedbackMsg('Captcha is required');
 			return;
 		}
+		// if (!captchaValue) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
 		fetch('/?no-cache=1', {
 			// fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
-				...data,
 				'form-name': 'contact',
-				'g-recaptcha-response': captcha
+				'g-recaptcha-response': captcha,
+				...data
 			})
 		})
 			.then((response) => {
@@ -107,7 +112,7 @@ const ContactForm = () => {
 			{errors.email && <span className={contactStyles.errorMessage}>{errors.email.message}</span>}
 			<div className={contactStyles.formEntry}>
 				<textarea
-					id="message"
+					id="text"
 					aria-label="text message"
 					name="text"
 					rows="6"
@@ -119,14 +124,14 @@ const ContactForm = () => {
 			{errors.text && <span className={contactStyles.errorMessage}>please enter a message</span>}
 			<div className={contactStyles.submitContainer}>
 				<ReCAPTCHA
-					name="g-recaptcha-response"
-					ref={captchaRef}
+					// name="g-recaptcha-response"
+					// ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
 						console.log('Captcha value:', val);
 						setCaptcha(val);
-						setValue('g-recaptcha-response', val, true);
+						// setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
 				/>
