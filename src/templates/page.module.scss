@@ -13,14 +13,12 @@
 		padding: 1rem 3px;
 	}
 	@media (min-width: 400px) {
-		padding: $s-size;
+		padding: 0 $s-size 0 $s-size;
 	}
 	@media (min-width: 640px) {
-		padding: $m-size;
+		padding: 0 $xl-size 0 $xl-size;
 	}
-	@media (min-width: 1000x) {
-		padding: $l-size;
-	}
+	max-width: 900px;
 }
 
 .markdown {
