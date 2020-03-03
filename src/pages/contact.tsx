@@ -14,14 +14,14 @@ const ContactForm = () => {
 	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	const [ captcha, setCaptcha ] = useState(null);
-	// let captchaRef = useRef(null);
+	let captchaRef = useRef(null);
 
-	// useEffect(
-	// 	() => {
-	// 		register({ required: 'Required', name: 'g-recaptcha-response' });
-	// 	},
-	// 	[ register ]
-	// );
+	useEffect(
+		() => {
+			register({ required: 'Required', name: 'g-recaptcha-response' });
+		},
+		[ register ]
+	);
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		// const captchaValue = captchaRef.current.getValue();
@@ -124,14 +124,14 @@ const ContactForm = () => {
 			{errors.text && <span className={contactStyles.errorMessage}>please enter a message</span>}
 			<div className={contactStyles.submitContainer}>
 				<ReCAPTCHA
-					// name="g-recaptcha-response"
-					// ref={captchaRef}
+					name="g-recaptcha-response"
+					ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
 						console.log('Captcha value:', val);
 						setCaptcha(val);
-						// setValue('g-recaptcha-response', val, true);
+						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
 				/>
