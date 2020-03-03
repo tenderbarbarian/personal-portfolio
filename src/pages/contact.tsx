@@ -32,14 +32,14 @@ const ContactForm = () => {
 			setFeedbackMsg('Captcha is required');
 			return;
 		}
-		// fetch('/?no-cache=1', {
-		fetch('/', {
+		fetch('/?no-cache=1', {
+			// fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
+				...data,
 				'form-name': 'contact',
-				'g-recaptcha-response': captchaValue,
-				...data
+				'g-recaptcha-response': captchaValue
 			})
 		})
 			.then((response) => {
@@ -118,7 +118,9 @@ const ContactForm = () => {
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
-						setValue('g-recaptcha-response', val, true);
+						console.log('Captcha value:', val);
+						// setValue('g-recaptcha-response', val, true);
+						setValue('g-recaptcha-response', val);
 						// console.log('end');
 					}}
 				/>
