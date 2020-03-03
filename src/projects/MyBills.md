@@ -24,7 +24,7 @@ __Table of content:__
     - [Filtering/Sorting expenses](#filteringsorting-expenses)
     - [Editing an expense](#editing-an-expense)
     - [Removing an expense](#removing-an-expense)
-- [Technologies](#technologies)
+- [Tech stack](#tech-stack)
 
 <!-- /TOC -->
 ## What is it?
@@ -89,7 +89,7 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 - From the pop-up select the google account you want to use
 - Your dashboard screen should open with your name on the top-right
 - App Navigation :
-    1. __Dashboard__: Clicking the *Expensify* text on the header from any page will redirect you to the expenses dashboard.
+    1. __Dashboard__: Clicking the *MyBills* text on the header from any page will redirect you to the expenses dashboard.
     2. __Logout__: The *Logout* button on the top right of the header will log you out from the current session. All your expenses will be saved for further use.
 
 ### Creating an expense
@@ -108,12 +108,12 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 ![filterMyBills](./filterMyBills.jpg)
 - Visit your dashboard page and the expense summary will show you the total number of expenses on screen and the amount they total.
 - Use the filters to filter your expenses
-    1. __Search By Title__: Search for your expense by it's title and recieve per-keystroke feedback of the value typed.
+    1. __Search By Title__: Search for your expense by it's title and receive per-keystroke feedback of the value typed.
     2. __Search By Date__: Search for a group of expenditures between two particular dates i.e the start date and the end date.
 - Sort your expenses using the sort dropdown/select box
     1. __Amount__: Displays all the expenses on screen in the order of costliest expense first and the cheapest last.
     2. __Date__: Displays all the expenses on screen in the order such that the expense with the latest date of expenditure comes first.
-- The *Unfiltered Expenses* component will continue to show how many expenses have been hidden due to the filters applied. 
+ 
 
 ### Editing an expense
 ![editScreenshot](./mybills3.jpg)
@@ -124,11 +124,9 @@ DELETE /expense/`<expenseId>` | Delete an expense entry
 ### Removing an expense
 - Clicking on any displayed expense will allow you to remove it
 - The *Remove* button beneath the *Add Expense* button will delete your expense
-- Clicking on that button will ask for your confirmation for removal
-- Click on *Remove* on the pop-up to confirm the removal
 - You will be redirected to the dashboard upon removal.
 
-## Technologies
+## Tech stack
 
 The following technologies have been used to achieve the end goal
 
