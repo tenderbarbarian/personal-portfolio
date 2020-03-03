@@ -39,13 +39,19 @@ const ContactForm = () => {
 			body: encode({
 				...data,
 				'form-name': 'contact',
-				'g-recaptcha-response': captchaValue
+				'g-recaptcha-response': captcha
 			})
 		})
 			.then((response) => {
-				console.log(response);
+				// console.log(response);
+				if (response.status === 200 && !response.redirected) {
+					//netlify doesnt give an error on recaptcha fail (only 303 redirect...) :(
+					setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
+				} else {
+					console.log('!!!!!!!!!!! form server response: ', response);
+					setFeedbackMsg(`Error has occured, please try again later.`);
+				}
 				e.target.reset();
-				setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
 			})
 			.catch((error) => {
 				setFeedbackMsg('Oops, something went wrong. The form could not be submitted.');
@@ -119,8 +125,8 @@ const ContactForm = () => {
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
 						console.log('Captcha value:', val);
-						// setValue('g-recaptcha-response', val, true);
-						setValue('g-recaptcha-response', val);
+						setCaptcha(val);
+						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
 				/>
