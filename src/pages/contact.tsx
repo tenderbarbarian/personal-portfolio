@@ -54,12 +54,12 @@ const ContactForm = () => {
 					setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
 				} else {
 					console.log('!!!!!!!!!!! server response: ', response);
-					setFeedbackMsg(`Error has occured, please try again later.`);
+					setFeedbackMsg(`Something went wrong, please try again later.`);
 				}
 				e.target.reset();
 			})
 			.catch((error) => {
-				setFeedbackMsg('Oops, something went wrong. The form could not be submitted.');
+				setFeedbackMsg('Oops, the form could not be submitted. Are you offline? Please try again later.');
 				console.log(error);
 			});
 	};

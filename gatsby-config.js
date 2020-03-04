@@ -79,7 +79,7 @@ module.exports = {
 		`gatsby-plugin-catch-links`,
 		'gatsby-plugin-use-dark-mode',
 		{
-			resolve: `gatsby-plugin-manifest`,
+			resolve: `gatsby-plugin-manifest`, //For the web app manifest to be cached, we'll need to list gatsby-plugin-manifest BEFORE gatsby-plugin-offline.
 			options: {
 				name: `KatarzynaPohl-Portfolio`,
 				short_name: `pohl`,
