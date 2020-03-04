@@ -60,27 +60,27 @@ self.addEventListener('push', function(event) {
 self.addEventListener('fetch', function(event, body) {
 	console.log('Fetch!', event);
 	// We will cache all POST requests to matching URLs
-	if (event.request.method === 'POST') {
-		console.log('POST!', event);
-		event.respondWith(
-			// First try to fetch the request from the server
-			fetch(event.request)
-				// If it works, put the response into IndexedDB
-				.then(function(response) {
-					// Compute a unique key for the POST request
+	// if (event.request.method === 'POST') {
+	// 	console.log('POST!', event);
+	// 	event.respondWith(
+	// 		// First try to fetch the request from the server
+	// 		fetch(event.request)
+	// 			// If it works, put the response into IndexedDB
+	// 			.then(function(response) {
+	// 				// Compute a unique key for the POST request
 
-					/* ... save entry to IndexedDB ... */
+	// 				/* ... save entry to IndexedDB ... */
 
-					// Return the (fresh) response
-					console.log('POST response: ');
-					console.log(response);
-					return response;
-				})
-				.catch(function() {
-					// If it does not work, return the cached response. If the cache does not
-					// contain a response for our request, it will give us a 503-response
-					console.log('ERROR from SW ,POST issue');
-				})
-		);
-	}
+	// 				// Return the (fresh) response
+	// 				console.log('POST response: ');
+	// 				console.log(response);
+	// 				return response;
+	// 			})
+	// 			.catch(function() {
+	// 				// If it does not work, return the cached response. If the cache does not
+	// 				// contain a response for our request, it will give us a 503-response
+	// 				console.log('ERROR from SW ,POST issue');
+	// 			})
+	// 	);
+	// }
 });

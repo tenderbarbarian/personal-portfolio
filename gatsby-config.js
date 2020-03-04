@@ -93,8 +93,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-offline`,
 			options: {
-				appendScript: require.resolve('./src/service-worker.js'),
-				precachePages: [ `/ko/`, `/projects/*` ]
+				appendScript: require.resolve('./src/service-worker.js')
 			}
 		}
 		// `gatsby-plugin-remove-serviceworker`
