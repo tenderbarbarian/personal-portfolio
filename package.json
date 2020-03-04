@@ -1,6 +1,6 @@
 {
 	"name": "Portfolio",
-	"private": false,
+	"private": true,
 	"description": "A personal portfolio site",
 	"version": "1.0.0",
 	"author": "Katarzyna Pohl <ksoloduc@gmail.com>",
@@ -58,6 +58,9 @@
 		"prettier": "^1.18.2",
 		"typescript": "^3.6.3"
 	},
+	"optionalDependencies": {
+		"fsevents": "2.1.2"
+	},
 	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
@@ -67,8 +70,12 @@
 		"start": "npm run develop",
 		"serve": "gatsby serve"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tenderbarbarian/personal-portfolio"
+	},
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://upbeat-wilson-ca4160.netlify.com/contact/"
 	},
 	"main": "index.js"
 }
