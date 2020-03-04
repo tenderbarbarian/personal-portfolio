@@ -2,11 +2,8 @@
 @import '../styles/components.scss';
 
 .box {
-	padding: 1rem;
-
-	margin: 1rem 0 $l-size 0;
-	h1 {
-	}
+	margin: 2rem 1rem $l-size 1rem;
+	padding-top: $s-size;
 	position: relative;
 	$border: 2px;
 	border: solid $border transparent;
