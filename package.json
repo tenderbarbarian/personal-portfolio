@@ -18,8 +18,8 @@
 		"gatsby-plugin-catch-links": "^2.1.25",
 		"gatsby-plugin-manifest": "^2.2.20",
 		"gatsby-plugin-nprogress": "^2.1.19",
+		"gatsby-plugin-offline": "^3.0.35",
 		"gatsby-plugin-react-helmet": "^3.1.10",
-		"gatsby-plugin-remove-serviceworker": "^1.0.0",
 		"gatsby-plugin-scss-typescript": "^4.0.10",
 		"gatsby-plugin-sharp": "^2.4.5",
 		"gatsby-plugin-sitemap": "^2.2.26",
@@ -59,9 +59,11 @@
 		"typescript": "^3.6.3"
 	},
 	"optionalDependencies": {
-		"fsevents": "2.1.2"
+		"fsevents": "^2.1.2"
 	},
-	"keywords": [ "gatsby" ],
+	"keywords": [
+		"gatsby"
+	],
 	"license": "MIT",
 	"scripts": {
 		"build": "env-cmd gatsby build",

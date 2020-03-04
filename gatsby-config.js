@@ -84,18 +84,18 @@ module.exports = {
 				name: `KatarzynaPohl-Portfolio`,
 				short_name: `pohl`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#3c474b`,
+				theme_color: `#fc7c04`,
 				display: `standalone`,
 				icon: `src/images/favicon.png` // This path is relative to the root of the site.
 			}
 		},
-		// {
-		// 	resolve: `gatsby-plugin-offline`,
-		// 	options: {
-		// 		appendScript: require.resolve('./src/service-worker.js')
-		// 	}
-		// }
-		`gatsby-plugin-remove-serviceworker`
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+				appendScript: require.resolve('./src/service-worker.js')
+			}
+		}
+		// `gatsby-plugin-remove-serviceworker`
 	]
 };
