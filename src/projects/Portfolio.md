@@ -7,7 +7,7 @@ tech: ["React", "Typescript", "Gatsby", "GraphQL", "Sass"]
 date: '2020-01-06'
 featuredImage: "./portfolio1.jpg"
 ---
-<!-- # iframe: 'https://www.youtube.com/embed/dQw4w9WgXcQ' -->
+
 __Table of content:__
 <!-- TOC -->
 

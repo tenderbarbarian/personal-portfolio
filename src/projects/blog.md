@@ -2,7 +2,7 @@
 layout: page
 title: "Headless Blog"
 date: "2019-12-12"
-demo: 'https://optimistic-stonebraker-707e80.netlify.com/blog/null'
+demo: 'blog-headless.netlify.com'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL, deployed with Netlify'
 featuredImage: "./headless.jpg"
