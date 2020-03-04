@@ -100,7 +100,7 @@ const ContactForm = () => {
 					name="email"
 					aria-label="email"
 					ref={register({
-						required: 'Required',
+						required: 'please enter your email',
 						pattern: {
 							value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
 							message: 'invalid email address'
@@ -115,12 +115,12 @@ const ContactForm = () => {
 					aria-label="text message"
 					name="text"
 					rows="6"
-					ref={register({ required: 'Required' })}
+					ref={register({ required: 'please enter a message' })}
 					placeholder="what's on your mind?"
 					className={contactStyles.formInput}
 				/>
 			</div>
-			{errors.text && <span className={contactStyles.errorMessage}>please enter a message</span>}
+			{errors.text && <span className={contactStyles.errorMessage}>{errors.text.message}</span>}
 			<div className={contactStyles.submitContainer}>
 				{/* <ReCAPTCHA
 					name="g-recaptcha-response"

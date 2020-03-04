@@ -3,20 +3,24 @@
 
 .box {
 	margin: 2rem 1rem $l-size 1rem;
-	padding-top: $s-size;
-	position: relative;
-	$border: 2px;
-	border: solid $border transparent;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: $border;
-		left: 0;
-		z-index: -1;
-		margin: -$border;
-		background: $juicy;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+		position: relative;
+		padding-top: $m-size;
+		$border: 2px;
+		border: solid $border transparent;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: $border;
+			left: 0;
+			z-index: -1;
+			margin: -$border;
+			background: $juicy;
+		}
 	}
 }

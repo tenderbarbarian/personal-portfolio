@@ -4,7 +4,8 @@
 .form {
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	padding-top: 1rem;
+	max-width: 450px;
 	@media (min-width: 800px) {
 		padding: $s-size;
 	}
@@ -34,9 +35,6 @@
 	font-style: italic;
 	margin: 0;
 	font-size: $u-size;
-	@media (min-width: $desktop-breakpoint) {
-		margin-left: $form-indentation;
-	}
 }
 
 .formEntry {
