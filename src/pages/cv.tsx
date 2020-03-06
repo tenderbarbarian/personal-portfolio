@@ -21,6 +21,13 @@ const CV = () => (
 
 		<div className={cvStyles.cvHolder}>
 			<Image />
+			<div className={cvStyles.overlay}>
+				<div className={cvStyles.overlayLinks}>
+					<a href={cvPDF} className={cvStyles.linkButton}>
+						Download
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<div className={cvStyles.callToAction}>

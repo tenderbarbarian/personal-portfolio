@@ -6,4 +6,6 @@ export const iconButton: string;
 export const icon: string;
 export const downloadSection: string;
 export const cvHolder: string;
+export const overlay: string;
+export const overlayLinks: string;
 export const callToAction: string;

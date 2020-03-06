@@ -22,16 +22,47 @@
 }
 
 .cvHolder {
+	position: relative;
 	border: 1px solid $arsenic;
 	padding: 1px;
 	border-radius: 3px;
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	// transition: .3s ease;
+	background-color: #dbdbdb98;
+}
+
+.overlayLinks {
+	position: absolute;
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	a {
+		display: block;
+		margin: .5rem;
+	}
+}
+
+.cvHolder:hover .overlay {
+	opacity: 1;
 }
 
 .callToAction {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// border: 1px dashed green;
 	padding: $l-size 0;
 	a {
 		margin: 0;
