@@ -12,4 +12,6 @@ export const externalLinkList: string;
 export const cardTitle: string;
 export const cardDescription: string;
 export const cardTechItem: string;
+export const overlay: string;
+export const overlayLinks: string;
 export const imgHoverZoom: string;

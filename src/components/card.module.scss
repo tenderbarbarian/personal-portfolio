@@ -14,6 +14,7 @@
 	text-align: left;
 	a {
 		text-decoration: none;
+		margin: 0;
 	}
 	h2 {
 		margin: 0 0 1rem 4px;
@@ -50,16 +51,14 @@
 		float: left;
 	}
 	padding: $s-size;
-	a {
-		margin: 0;
-	}
+
 	img {
 		display: flex;
 		flex-grow: 1;
 		width: 100%;
 		background-size: cover;
 		@media (min-width: 500px) {
-			max-width: 80%;
+			max-width: 100%;
 		}
 	}
 	iframe {
@@ -90,21 +89,8 @@
 	font-size: $s-size;
 	text-decoration: none;
 	margin: $s-size $s-size $s-size 3px;
-	// @media (min-width: 440px) {
-	// 	margin-bottom: $s-size;
-	// }
 }
 
-// .card-tech-item {
-
-//
-// 	font-size: $u-size;
-// 	margin: 3px;
-// 	opacity: .5;
-// 	a {
-// 		text-decoration: none;
-// 	}
-// }
 .card-tech-item {
 	margin: 0 3px;
 	padding: 0 3px;
@@ -115,23 +101,52 @@
 	background: $default-font-color;
 	border-radius: 3px;
 }
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .3s ease;
+	// background-color: $third-btn-color;
+}
 
+.overlayLinks {
+	position: absolute;
+	// display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	a {
+		display: block;
+		margin: .5rem;
+	}
+}
+.img-hover-zoom:hover .overlay {
+	opacity: 1;
+}
 .img-hover-zoom:hover img {
-	transform: scale(1.1);
+	transform: scale(1.4);
+	opacity: .1;
 }
 
 .img-hover-zoom img {
-	transition: transform .3s ease;
+	transition: transform .3s ease-in-out;
 }
 
 .img-hover-zoom {
 	display: flex;
 	flex: 1;
 	width: 100%;
-	height: 100%;
+	// height: 100%;
+	position: relative;
 	max-height: 300px;
 	max-width: 500px;
 	border-radius: 3px;
-
+	opacity: 1;
 	overflow: hidden; /* Hide the overflowing of child elements */
 }

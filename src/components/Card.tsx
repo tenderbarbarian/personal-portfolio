@@ -57,7 +57,7 @@ export const Card = ({ node }: CardProps) => {
 							<span>Live demo</span>
 						</a>
 					)}
-					<Link to={`${node.fields.slug}`} className={cardStyles.borderButton}>
+					<Link to={node.fields.slug} className={cardStyles.borderButton}>
 						<span>More</span>
 					</Link>
 				</div>
@@ -74,14 +74,26 @@ export const Card = ({ node }: CardProps) => {
 							allowFullScreen
 						/>
 					) : (
-						<Link to={`${node.fields.slug}`}>
+						<div>
 							{featuredImage && (
-								<img
-									src={featuredImage.childImageSharp.sizes.src}
-									sizes={featuredImage.childImageSharp.sizes.sizes}
-								/>
+								<div>
+									<img
+										src={featuredImage.childImageSharp.sizes.src}
+										sizes={featuredImage.childImageSharp.sizes.sizes}
+									/>
+									<div className={cardStyles.overlay}>
+										<div className={cardStyles.overlayLinks}>
+											<Link to={demo} className={cardStyles.linkButton}>
+												Live demo
+											</Link>
+											<Link to={node.fields.slug} className={cardStyles.linkButton}>
+												More info
+											</Link>
+										</div>
+									</div>
+								</div>
 							)}
-						</Link>
+						</div>
 					)}
 				</div>
 			</div>
