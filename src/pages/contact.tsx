@@ -13,15 +13,15 @@ const encode = (data) => {
 const ContactForm = () => {
 	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
-	const [ captcha, setCaptcha ] = useState(null);
-	let captchaRef = useRef(null);
+	// const [ captcha, setCaptcha ] = useState(null);
+	// let captchaRef = useRef(null);
 
-	useEffect(
-		() => {
-			register({ required: 'Required', name: 'g-recaptcha-response' });
-		},
-		[ register ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		register({ required: 'Required', name: 'g-recaptcha-response' });
+	// 	},
+	// 	[ register ]
+	// );
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		// const captchaValue = captchaRef.current.getValue();
