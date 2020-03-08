@@ -34,9 +34,9 @@ const Footer = ({ author, email, linkedin, github }: FooterProps) => (
 			</div>
 		</div>
 		<div>
-			<IconLink url={github} icon={[ 'fab', 'github' ]} />
-			<IconLink url={`mailto:${email}`} icon={faEnvelope} />
-			<IconLink url={linkedin} icon={[ 'fab', 'linkedin' ]} />
+			<IconLink url={github} icon={[ 'fab', 'github' ]} text="github" />
+			<IconLink url={`mailto:${email}`} icon={faEnvelope} text="email" />
+			<IconLink url={linkedin} icon={[ 'fab', 'linkedin' ]} text="linkedin" />
 		</div>
 	</footer>
 );

@@ -2,7 +2,7 @@
 layout: page
 title: "Headless Blog"
 date: "2019-12-12"
-demo: 'https://blog-headless.netlify.com'
+demo: 'https:// blog-headless.netlify.com'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL, deployed with Netlify'
 featuredImage: "./headless.jpg"
@@ -58,7 +58,9 @@ https://www.youtube.com/watch?v=-PL4rVvd1sc
 
 ## PWA
 
-Progressive web app with offline capabilities.
+Progressive web app with offline capabilities and great Lighthouse score: 
+
+![LightHouse-score](./headless-lighthouse.jpg) 
 
 ## Headless
 

@@ -61,9 +61,7 @@
 	"optionalDependencies": {
 		"fsevents": "^2.1.2"
 	},
-	"keywords": [
-		"gatsby"
-	],
+	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
 		"build": "env-cmd gatsby build",
@@ -77,7 +75,7 @@
 		"url": "https://github.com/tenderbarbarian/personal-portfolio"
 	},
 	"bugs": {
-		"url": "https://upbeat-wilson-ca4160.netlify.com/contact/"
+		"url": "https://pohl.netlify.com/contact/"
 	},
 	"main": "index.js"
 }

@@ -9,10 +9,4 @@ export const onServiceWorkerUpdateReady = () => {
 	}
 };
 
-let swNotInstalled = true;
-const pathnameResources = [];
-
-// export const onPrefetchPathname = ({ pathname, getResourcesForPathname }) => {
-// 	console.log(pathname);
-// };
 export const registerServiceWorker = () => true;

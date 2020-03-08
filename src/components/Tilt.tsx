@@ -55,13 +55,17 @@ const Parallax = () => {
 				<div className={tiltStyles.shape}>
 					<div>
 						<strong>
-							<IconLink url={data.site.siteMetadata.github} icon={[ 'fab', 'github' ]} />
+							<IconLink url={data.site.siteMetadata.github} icon={[ 'fab', 'github' ]} text="github" />
 						</strong>
 						<strong>
-							<IconLink url={`mailto:${data.site.siteMetadata.email}`} icon={faEnvelope} />
+							<IconLink url={`mailto:${data.site.siteMetadata.email}`} icon={faEnvelope} text="email" />
 						</strong>
 						<strong>
-							<IconLink url={data.site.siteMetadata.linkedin} icon={[ 'fab', 'linkedin' ]} />
+							<IconLink
+								url={data.site.siteMetadata.linkedin}
+								icon={[ 'fab', 'linkedin' ]}
+								text="linkedin"
+							/>
 						</strong>
 					</div>
 				</div>

@@ -45,16 +45,32 @@ This is a feature-rich portfolio project; with many things like SEO, speedy, opt
 
 Despite being heavily SEO optimized performance and accessibility have also been a major factor when implementing this portfolio. This leads to a great Lighthouse result.
 
+![LightHouse-score](./portfolio-lighthouse.jpg) 
+
 ## Responsive
 
-This portfolio is optimized for phones, tablets and desktops. The styling is done with CSS3 postprocessor Sass.
+This portfolio is optimized for phones, tablets and desktops. The styling is done with CSS3 post-processor Sass.
 
 ## PWA
 
 Implements Progressive Web Apps features (i.e. offline capability). With the help of manifest and web workers we get a product that functions offline and where wifi is unreliable. 
 
+Among service worker features, is a message that displays when a service worker updates.
+The following code displays a confirm prompt asking the user whether they would like to refresh the page when an update is found:
+
+```JS
+export const onServiceWorkerUpdateReady = () => {
+	const answer = window.confirm(`This application has been updated. ` + `Reload to display the latest version?`);
+	if (answer === true) {
+		window.location.reload();
+	}
+};
+
+export const registerServiceWorker = () => true;
+``` 
+
 ## Syntax highlighting
-Code properly formatted is automatically highlighted with Prism. The code lines are numbered and languages labeled for clarity.
+Code properly formatted is automatically highlighted with `Prism`. The code lines are numbered and languages labeled for clarity.
 
 Which gives us the following effect: 
 
@@ -70,15 +86,30 @@ class Person {
         } while( coding || drawing == play);
     }
 }
-~~~
-
+~~~ 
 
 ## Dark mode
 
-Strained eyes? DarkMode to the rescue! By implementing a custom `use-dark-mode` React Hook and `.dark-mode` and `.light-mode` css classes, I've arrived at the two different switchable styles. After adding a toggle switch on the right side of the header, we get a fully functioning customizable dark/light mode. 
+Strained eyes? DarkMode to the rescue! By implementing a custom `use-dark-mode` React Hook and `.dark-mode` and `.light-mode` css classes, I've arrived at the two different switchable styles. After adding a toggle switch on the right side of the header, we get a fully functioning customizable dark/light mode, and the state of the app is stored in the `localStorage`. 
 
 ## GraphQL & Markdown
-To glue it all the site relies on GraphQL. It queries the content, and generates static pages  from markdown files (the .md files are located in the `src/projects` directory). Static pages are linked automatically, and they have ability to embed responsive video as well as codepen components if needed. 
+To glue it all the site relies on GraphQL. It queries the content, and generates static pages  from markdown files (the .md files are located in the `src/projects` directory). It is done with GraphQL:
+
+~~~JS
+results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+		const { slug, layout } = node.fields;
+
+		createPage({
+			path: slug,
+
+			component: path.resolve(`./src/templates/${layout || 'page'}.tsx`),
+			context: {
+				slug
+			}
+		});
+	});
+~~~
+ Static pages are linked automatically, and they have ability to embed responsive video as well as codepen components if needed. 
 
 ## Parallax Tilt Effect
 Hopefully, you enjoyed playing with the tilt card on home page, I know I did. It's intended to be fun and playful. And honestly I had great time implementing it as well.
@@ -97,11 +128,44 @@ transform-style: preserve-3d;
 And below the card there's an additional shadow: 
 ```css
 box-shadow: -2px -2px 2px rgba(224, 223, 223, 0.1), 3px 3px 10px 1px rgba(36, 36, 36, 0.2);
-```
+``` 
 
 ## Contact form
 
-Super light weight form uses a tiny `react-hook-form` library definitely improved my process of arriving at a super light weight great preforming contact form. In comparison, Redux-form and Formik give a less pleasant developer experience and trigger more rerendering.
+Super light weight form uses a tiny `react-hook-form` library definitely improved my process of arriving at a super light weight great preforming contact form. In comparison, Redux-form and Formik give a less pleasant developer experience and trigger more re-rendering. On the back-end there's a spam filter to weed out suspicious entries.
+
+Main form logic is therefore quite simple and developer friendly:
+~~~JS
+const ContactForm = () => {
+	const { register, handleSubmit, errors, setValue, setError } = useForm();
+	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
+	const onSubmit = (data, e) => {
+		e.preventDefault();
+		fetch('/?no-cache=1', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': 'contact',
+				...data
+			})
+		})
+			.then((response) => {
+				console.log(response);
+				if (response.status === 200 && !response.redirected) {
+					setFeedbackMsg(`Thanks for reaching out! I'll get back to you soon.`);
+				} else {
+					setFeedbackMsg(`Something went wrong, please try again later.`);
+				}
+				e.target.reset();
+			})
+			.catch((error) => {
+				setFeedbackMsg('Oops, the form could not be submitted. Are you offline? Please try again later.');
+				console.log(error);
+			});
+  };
+  
+  ...
+~~~ 
 
 ## Speedy, optimized, responsive images
 

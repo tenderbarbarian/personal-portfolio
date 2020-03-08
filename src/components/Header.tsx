@@ -18,9 +18,11 @@ const Header = ({ siteTitle }: HeaderProps) => (
 		<nav>
 			<ul className={headerStyles.navList}>
 				{logo && (
-					<Link to="/">
-						<img src={logo} className={headerStyles.logo} alt={siteTitle} />
-					</Link>
+					<li>
+						<Link to="/">
+							<img src={logo} className={headerStyles.logo} alt={siteTitle} />
+						</Link>
+					</li>
 				)}
 				<li>
 					<Link to="/" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>
