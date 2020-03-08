@@ -75,6 +75,8 @@ const ContactForm = () => {
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 		>
+			<h3>“Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read.”</h3>
+			<p>― Groucho Marxat</p>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
 			<div className={contactStyles.formEntry}>

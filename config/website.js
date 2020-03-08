@@ -5,9 +5,9 @@ const meta = {
 	siteDescription: 'Katarzyna Pohl - Frontend web developer.',
 	siteTitleAlt: 'Katarzyna Pohl - Frontend web dev',
 	siteShortName: 'Pohl',
-	siteUrl: 'https://github.com/tenderbarbarian',
+	siteUrl: 'https://pohl.netlify.com',
 	email: 'katarzyna.m.pohl@gmail.com',
-	linkedin: 'https://www.linkedin.com/in/katarzynasoloducha/',
+	linkedin: 'https://www.linkedin.com/in/katarzyna-m-pohl/',
 	github: 'https://github.com/tenderbarbarian'
 };
 
