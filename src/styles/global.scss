@@ -63,7 +63,7 @@ a {
 	position: relative;
 	display: flex;
 	flex-grow: 1;
-	// width: 500px;
+	margin-bottom: $s-size;
 	min-width: 0;
 	&::-webkit-scrollbar {
 		width: 10px;

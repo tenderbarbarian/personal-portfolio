@@ -14,7 +14,6 @@ __Table of content:__
 - [What it it?](#what-it-it)
 - [Core technologies](#core-technologies)
 - [Highly optimized](#highly-optimized)
-- [Responsive](#responsive)
 - [PWA](#pwa)
 - [Syntax highlighting](#syntax-highlighting)
 - [Dark mode](#dark-mode)
@@ -22,6 +21,7 @@ __Table of content:__
 - [Parallax Tilt Effect](#parallax-tilt-effect)
 - [Contact form](#contact-form)
 - [Speedy, optimized, responsive images](#speedy-optimized-responsive-images)
+- [Responsive (design & titled card)](#responsive-design--titled-card)
 
 <!-- /TOC -->
 
@@ -43,13 +43,9 @@ This is a feature-rich portfolio project; with many things like SEO, speedy, opt
 
 ## Highly optimized
 
-Despite being heavily SEO optimized performance and accessibility have also been a major factor when implementing this portfolio. This leads to a great Lighthouse result.
+Despite being heavily SEO optimized, performance and accessibility have also been a major factor when implementing this portfolio. This leads to a great Lighthouse result.
 
 ![LightHouse-score](./portfolio-lighthouse.jpg) 
-
-## Responsive
-
-This portfolio is optimized for phones, tablets and desktops. The styling is done with CSS3 post-processor Sass.
 
 ## PWA
 
@@ -198,3 +194,8 @@ The gatsby-image component automatically sets up the “blur-up” effect as wel
 
 If you'd like to learn more or have any questions please feel free to contact me.
 Oh, and feel free to give it star on GitHub if you like.
+
+## Responsive (design & titled card)
+
+This portfolio is optimized for phones, tablets and desktops. The styling is done with CSS3 post-processor Sass.
+The images scale nicely, and for smaller resolutions use smaller source files. The interactive tilted card scales as well, an on mobile uses gyroscope (where the browser provide the functionality, it's still an experimental feature) to orient itself.
