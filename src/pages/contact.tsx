@@ -43,7 +43,7 @@ const ContactForm = () => {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': captcha,
+				// 'g-recaptcha-response': RECAPTCHA_KEY,
 				...data
 			})
 		})
@@ -131,7 +131,7 @@ const ContactForm = () => {
 					sitekey={RECAPTCHA_KEY}
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
-						console.log('Captcha value:', val);
+						// console.log('Captcha value:', val);
 						setCaptcha(val);
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
