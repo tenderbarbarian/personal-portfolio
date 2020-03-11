@@ -77,11 +77,13 @@ export const Card = ({ node }: CardProps) => {
 						<div>
 							{featuredImage && (
 								<div>
-									<img
-										src={featuredImage.childImageSharp.sizes.src}
-										sizes={featuredImage.childImageSharp.sizes.sizes}
-									/>
-									<div className={cardStyles.overlay}>
+									<Link to={node.fields.slug}>
+										<img
+											src={featuredImage.childImageSharp.sizes.src}
+											sizes={featuredImage.childImageSharp.sizes.sizes}
+										/>
+									</Link>
+									{/* <div className={cardStyles.overlay}>
 										<div className={cardStyles.overlayLinks}>
 											<Link to={demo} className={cardStyles.linkButton}>
 												Live demo
@@ -90,7 +92,7 @@ export const Card = ({ node }: CardProps) => {
 												More info
 											</Link>
 										</div>
-									</div>
+									</div> */}
 								</div>
 							)}
 						</div>

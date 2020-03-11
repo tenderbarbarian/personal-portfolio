@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import pageStyles from './page.module.scss';
@@ -28,7 +28,7 @@ const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 
 		<div className={pageStyles.box}>
 			<div className={pageStyles.projectHeader}>
-				<h1 name="top">{data.markdownRemark.frontmatter.title}</h1>
+				<h1>{data.markdownRemark.frontmatter.title}</h1>
 				<div>
 					<a href="/projects/" className={pageStyles.borderButton}>
 						<span>Back</span>
@@ -62,9 +62,9 @@ const ContentTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
 		</div>
 
 		<div className={pageStyles.more}>
-			<a href="/projects/" className={pageStyles.linkButton}>
+			<Link to="/projects/" className={pageStyles.linkButton}>
 				More Projects
-			</a>
+			</Link>
 		</div>
 	</Layout>
 );
