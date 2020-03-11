@@ -43,7 +43,7 @@ const ContactForm = () => {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': RECAPTCHA_KEY,
+				'g-recaptcha-response': captcha,
 				'data-sitekey': RECAPTCHA_KEY,
 				...data
 			})
