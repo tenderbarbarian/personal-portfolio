@@ -44,6 +44,7 @@ const ContactForm = () => {
 			body: encode({
 				'form-name': 'contact',
 				// 'g-recaptcha-response': RECAPTCHA_KEY,
+				'g-recaptcha-response': RECAPTCHA_KEY,
 				...data
 			})
 		})

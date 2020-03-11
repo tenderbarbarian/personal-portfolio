@@ -12,7 +12,7 @@
 	background: $primary-btn-color;
 	border-bottom: 6px solid $secondary-btn-color;
 	font-size: 1rem;
-	box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.1);
 	&:hover {
 		color: white !important;
 		background: $third-btn-color;
@@ -31,7 +31,7 @@
 	border-radius: 2px;
 	text-decoration: none;
 	font-size: 1rem;
-	box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.1);
 	&:hover {
 		color: white !important;
 		background: $third-btn-color; //$secondary-btn-color;

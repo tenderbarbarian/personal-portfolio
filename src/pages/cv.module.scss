@@ -14,10 +14,13 @@
 		align-items: center;
 	}
 	a {
-		margin: 0 0 0 $s-size;
+		margin: 0;
 	}
 	h2 {
 		margin: 0;
+		@media (min-width: 640px) {
+			margin: 0 $s-size 0 0;
+		}
 	}
 }
 
