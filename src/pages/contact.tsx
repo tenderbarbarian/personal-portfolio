@@ -16,27 +16,27 @@ const ContactForm = () => {
 	const [ captcha, setCaptcha ] = useState(null);
 	let captchaRef = useRef(null);
 
-	useEffect(
-		() => {
-			register({ required: 'Required', name: 'g-recaptcha-response' });
-		},
-		[ register ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		register({ required: 'Required', name: 'g-recaptcha-response' });
+	// 	},
+	// 	[ register ]
+	// );
 	const onSubmit = (data, e) => {
 		e.preventDefault();
 		const captchaValue = captchaRef.current.getValue();
 		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		console.log(JSON.stringify(data));
-		// if (!captcha) {
-		// 	console.log('CAPTCHA missing!');
-		// 	setFeedbackMsg('Captcha is required');
-		// 	return;
-		// }
-		if (!captchaValue) {
+		if (!captcha) {
 			console.log('CAPTCHA missing!');
 			setFeedbackMsg('Captcha is required');
 			return;
 		}
+		// if (!captchaValue) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
 		fetch('/?no-cache=1', {
 			// fetch('/', {
 			method: 'POST',
