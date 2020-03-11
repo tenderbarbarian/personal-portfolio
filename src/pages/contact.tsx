@@ -43,7 +43,7 @@ const ContactForm = () => {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': RECAPTCHA_KEY,
+				'g-recaptcha-response': captcha,
 				...data
 			})
 		})
@@ -79,6 +79,7 @@ const ContactForm = () => {
 			<p>― Groucho Marxat</p>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
+			<div className="g-recaptcha" data-sitekey={RECAPTCHA_KEY} />
 			<div className={contactStyles.formEntry}>
 				<input
 					type="text"
