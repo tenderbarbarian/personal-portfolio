@@ -24,7 +24,7 @@ const ContactForm = () => {
 	);
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		// const captchaValue = captchaRef.current.getValue();
+		const captchaValue = captchaRef.current.getValue();
 		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
 		// console.log(JSON.stringify(data));
 		// if (!captcha) {
@@ -135,7 +135,7 @@ const ContactForm = () => {
 					onChange={(val) => {
 						// console.log('ReCAPTCHA onChange: ', val);
 						// console.log('Captcha value:', val);
-						// setCaptcha(val);
+						setCaptcha(val);
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
