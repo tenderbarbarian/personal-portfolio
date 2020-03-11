@@ -24,14 +24,14 @@ const ContactForm = () => {
 	// );
 	const onSubmit = (data, e) => {
 		e.preventDefault();
-		const captchaValue = captchaRef.current.getValue();
-		console.log('On SUBMIT captchaVal (works!)' + captchaValue);
-		console.log(JSON.stringify(data));
-		if (!captcha) {
-			console.log('CAPTCHA missing!');
-			setFeedbackMsg('Captcha is required');
-			return;
-		}
+		// const captchaValue = captchaRef.current.getValue();
+		// console.log('On SUBMIT captchaVal (works!)' + captchaValue);
+		// console.log(JSON.stringify(data));
+		// if (!captcha) {
+		// 	console.log('CAPTCHA missing!');
+		// 	setFeedbackMsg('Captcha is required');
+		// 	return;
+		// }
 		// if (!captchaValue) {
 		// 	console.log('CAPTCHA missing!');
 		// 	setFeedbackMsg('Captcha is required');
@@ -43,8 +43,8 @@ const ContactForm = () => {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				'g-recaptcha-response': captcha,
-				'data-sitekey': RECAPTCHA_KEY,
+				// 'g-recaptcha-response': captcha,
+				// 'data-sitekey': RECAPTCHA_KEY,
 				...data
 			})
 		})
@@ -70,18 +70,18 @@ const ContactForm = () => {
 			className={contactStyles.form}
 			name="contact"
 			method="post"
-			data-netlify-recaptcha="true"
+			// data-netlify-recaptcha="true"
 			netlify
 			netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
-			data-sitekey={RECAPTCHA_KEY}
+			// data-sitekey={RECAPTCHA_KEY}
 		>
 			<h3>“Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read.”</h3>
 			<p>― Groucho Marxat</p>
 			<input type="hidden" name="bot-field" />
 			<input type="hidden" name="form-name" value="contact" />
-			<div className="g-recaptcha" data-sitekey={RECAPTCHA_KEY} />
+			{/* <div className="g-recaptcha" data-sitekey={RECAPTCHA_KEY} /> */}
 			<div className={contactStyles.formEntry}>
 				<input
 					type="text"
@@ -127,7 +127,7 @@ const ContactForm = () => {
 			</div>
 			{errors.text && <span className={contactStyles.errorMessage}>{errors.text.message}</span>}
 			<div className={contactStyles.submitContainer}>
-				<ReCAPTCHA
+				{/* <ReCAPTCHA
 					name="g-recaptcha-response"
 					ref={captchaRef}
 					sitekey={RECAPTCHA_KEY}
@@ -138,7 +138,7 @@ const ContactForm = () => {
 						setValue('g-recaptcha-response', val, true);
 						// console.log('end');
 					}}
-				/>
+				/> */}
 				{feedbackMsg && <h3>{feedbackMsg}</h3>}
 				<button className={contactStyles.linkButton} type="submit">
 					Send message
