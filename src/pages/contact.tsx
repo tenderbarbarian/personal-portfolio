@@ -14,7 +14,7 @@ const ContactForm = () => {
 	const { register, handleSubmit, errors, setValue, setError } = useForm();
 	const [ feedbackMsg, setFeedbackMsg ] = useState(null);
 	const [ captcha, setCaptcha ] = useState(null);
-	// let captchaRef = useRef(null);
+	let captchaRef = useRef(null);
 
 	// useEffect(
 	// 	() => {
