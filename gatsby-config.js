@@ -79,6 +79,20 @@ module.exports = {
 		`gatsby-plugin-catch-links`,
 		'gatsby-plugin-use-dark-mode',
 		{
+			resolve: `gatsby-plugin-scroll-indicator`,
+			options: {
+				// Configure color of the scroll indicator
+				color: '#fc7c04',
+				// color: 'linear-gradient(35deg, #fc7c04, #ffc400 60%, #fc01a8)',
+				// Height of the scroll indicator
+				height: '10px',
+				// Configure paths where the scroll indicator will appear
+				paths: [ '/projects/**' ],
+				// Configure the z-index of the indicator element
+				zIndex: `9999`
+			}
+		},
+		{
 			resolve: `gatsby-plugin-manifest`, //For the web app manifest to be cached, we'll need to list gatsby-plugin-manifest BEFORE gatsby-plugin-offline.
 			options: {
 				name: `KatarzynaPohl-Portfolio`,

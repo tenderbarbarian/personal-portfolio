@@ -43,8 +43,8 @@ const ContactForm = () => {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				// 'g-recaptcha-response': RECAPTCHA_KEY,
-				'g-recaptcha-response': RECAPTCHA_KEY,
+				'g-recaptcha-response': captcha,
+				'data-sitekey': RECAPTCHA_KEY,
 				...data
 			})
 		})
@@ -75,6 +75,7 @@ const ContactForm = () => {
 			netlify-honeypot="bot-field"
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
+			data-sitekey={RECAPTCHA_KEY}
 		>
 			<h3>“Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read.”</h3>
 			<p>― Groucho Marxat</p>
