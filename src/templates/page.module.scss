@@ -42,6 +42,13 @@
 	}
 }
 
+a {
+	color: $primary-btn-color;
+	&:hover {
+		color: $secondary-btn-color !important;
+	}
+}
+
 .projectHeader {
 	display: flex;
 	flex-direction: column;
