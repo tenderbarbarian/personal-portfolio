@@ -85,7 +85,7 @@ module.exports = {
 				// color: '#fc7c04',
 				color: 'linear-gradient(to right, #fc01a8, #ffc400 60%, #fc7c04)',
 				// Height of the scroll indicator
-				height: '10px',
+				height: '3px',
 				// Configure paths where the scroll indicator will appear
 				paths: [ '/projects/**' ],
 				// Configure the z-index of the indicator element
