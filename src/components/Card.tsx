@@ -97,7 +97,6 @@ export const Card = ({ node }: CardProps) => {
 						)}
 					</div>
 					{/* ) */}
-					}
 				</div>
 			</div>
 		</li>
