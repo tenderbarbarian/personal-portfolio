@@ -64,7 +64,7 @@ export const Card = ({ node }: CardProps) => {
 			</div>
 			<div className={cardStyles.right}>
 				<div className={cardStyles.imgHoverZoom}>
-					{iframe ? (
+					{/* {iframe ? (
 						<iframe
 							width="500"
 							height="300"
@@ -73,17 +73,17 @@ export const Card = ({ node }: CardProps) => {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
 						/>
-					) : (
-						<div>
-							{featuredImage && (
-								<div>
-									<Link to={node.fields.slug}>
-										<img
-											src={featuredImage.childImageSharp.sizes.src}
-											sizes={featuredImage.childImageSharp.sizes.sizes}
-										/>
-									</Link>
-									{/* <div className={cardStyles.overlay}>
+					) : ( */}
+					<div>
+						{featuredImage && (
+							<div>
+								<Link to={node.fields.slug}>
+									<img
+										src={featuredImage.childImageSharp.sizes.src}
+										sizes={featuredImage.childImageSharp.sizes.sizes}
+									/>
+								</Link>
+								{/* <div className={cardStyles.overlay}>
 										<div className={cardStyles.overlayLinks}>
 											<Link to={demo} className={cardStyles.linkButton}>
 												Live demo
@@ -93,10 +93,11 @@ export const Card = ({ node }: CardProps) => {
 											</Link>
 										</div>
 									</div> */}
-								</div>
-							)}
-						</div>
-					)}
+							</div>
+						)}
+					</div>
+					{/* ) */}
+					}
 				</div>
 			</div>
 		</li>
