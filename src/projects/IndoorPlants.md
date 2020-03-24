@@ -6,9 +6,9 @@ code: 'https://github.com/tenderbarbarian/indoorplants'
 description: 'REST-ful CRUD hosted on Heroku. Stores data in MongoDB hosted by MongoLab'
 tech: [ "Javascript", "Express", "NodeJS", "MongoDB", "Bootstrap"]
 date: '2019-10-15'
-iframe: 'https://www.youtube.com/embed/Bqrl4QYQEr0'
 featuredImage: "./indoorplants.jpg"
 ---
+<!-- iframe: 'https://www.youtube.com/embed/Bqrl4QYQEr0' -->
 
 __Table of content:__
 <!-- TOC -->
@@ -135,7 +135,7 @@ DELETE /plants/`<Id>`/comments/`<CommentID>` | Remove a comment
 - Clicking the *Delete* button will remove your comment.
 
 
-https://youtu.be/Bqrl4QYQEr0
+<!-- https://youtu.be/Bqrl4QYQEr0 -->
 
 ## Backend
 

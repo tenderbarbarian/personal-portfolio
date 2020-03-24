@@ -6,9 +6,9 @@ demo: 'https://blog-headless.netlify.com'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'Headless React blog integrated with Contenful CMS. Uses Gatsby and GraphQL, deployed with Netlify'
 featuredImage: "./headless.jpg"
-iframe: 'https://www.youtube.com/embed/-PL4rVvd1sc'
 tech: [ "React", "Gatsby", "GraphQL", "Sass", "Javascript"]
 ---
+<!-- iframe: 'https://www.youtube.com/embed/-PL4rVvd1sc' -->
 
 <!-- <details>
 <summary>Click to expand</summary>
@@ -39,7 +39,7 @@ __Table of content:__
 
 It's a Headless React blog created with Gatsby and GraphQL. The content is created with Contentful CMS. 
 
-https://www.youtube.com/watch?v=-PL4rVvd1sc
+<!-- https://www.youtube.com/watch?v=-PL4rVvd1sc -->
 
 ## Core technologies
 

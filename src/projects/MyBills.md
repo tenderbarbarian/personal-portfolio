@@ -6,9 +6,9 @@ demo: 'http://react-redux-planer.herokuapp.com/'
 code: 'https://github.com/tenderbarbarian/track-stuff-react-app'
 description: 'App to track expenses. Includes Jest and Enzyme unit tests. Requires Google authentication to access. Test [login]: mybills.app.test@gmail.com [password]: 123.app.test'
 tech: ["React", "Firebase", "Enzyme", "Jest", "Sass", "Webpack", "Babel"]
-iframe: 'https://www.youtube.com/embed/A57fzELSibw'
 featuredImage: "./mybills.jpg"
 ---
+<!-- iframe: 'https://www.youtube.com/embed/A57fzELSibw' -->
 __Table of content:__
 <!-- TOC -->
 
@@ -70,7 +70,7 @@ MyBills App is a web app: a secure expense manager with authentication and user 
 
 User data is stored in the Firebase cloud. The accounts are authenticated via Google. Front-end is build with React, bundled with Webpack and styled with Sass. 
 
-https://youtu.be/A57fzELSibw
+<!-- https://youtu.be/A57fzELSibw -->
 
 ### API Endpoints
 Endpoints | Functionality
