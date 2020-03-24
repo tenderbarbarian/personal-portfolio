@@ -15,7 +15,7 @@ export type Frontmatter = {
 	featuredImage?: {
 		childImageSharp?: any;
 	};
-	iframe?: string;
+	// iframe?: string;
 };
 
 export type Node = {
@@ -30,7 +30,7 @@ interface CardProps {
 	node: Node;
 }
 export const Card = ({ node }: CardProps) => {
-	const { title, demo, code, featuredImage, tech, iframe, description } = node.frontmatter;
+	const { title, demo, code, featuredImage, tech, description } = node.frontmatter;
 
 	return (
 		<li key={title} className={cardStyles.card}>
